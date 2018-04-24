@@ -7,7 +7,7 @@
 [![Progress](https://img.shields.io/badge/progress-development-orange.svg?longCache=true&style=flat)]()
 
 このアプリはある地点（現在地点）を登録すると、そこまでの距離と方角（コンパス）が画面いっぱいに表示されるナビアプリです  
-以前はWheMaCa<https://github.com/cho5butter/WheMaCa_for_OS>して開発していましたが、GPSの精度が荒く、その用途では使いづらかったために、別アプリとして作成し直すことにしました  
+以前はWheMaCa<https://github.com/cho5butter/WheMaCa_for_OS>を開発していましたが、GPSの精度が荒く、その用途では使いづらかったために、別アプリとして作成し直すことにしました  
 
 以前のアプリがサンプルアプリを含む初めてのアプリ制作で、仕様がよくわかっていないところが多かったので、そのところも改善してます  
 iOS版の開発が終われば、Android版も作成する予定です  
