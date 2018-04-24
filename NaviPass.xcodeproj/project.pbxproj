@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E60EB812CE51CDBDE6B15FC /* Pods_NaviPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFF5451EF19356F1AB2E215 /* Pods_NaviPass.framework */; };
 		B3B8DAE8208F9523004C4DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */; };
 		B3B8DAEA208F9523004C4DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8DAE9208F9523004C4DC6 /* ViewController.swift */; };
 		B3B8DAED208F9523004C4DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B8DAEB208F9523004C4DC6 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5AFF5451EF19356F1AB2E215 /* Pods_NaviPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaviPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C82F8D6F6B98BEF568CC520 /* Pods-NaviPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaviPass.release.xcconfig"; path = "Pods/Target Support Files/Pods-NaviPass/Pods-NaviPass.release.xcconfig"; sourceTree = "<group>"; };
+		7544855C009E05795F43DB49 /* Pods-NaviPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaviPass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NaviPass/Pods-NaviPass.debug.xcconfig"; sourceTree = "<group>"; };
 		B3B8DAE4208F9523004C4DC6 /* NaviPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaviPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3B8DAE9208F9523004C4DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E60EB812CE51CDBDE6B15FC /* Pods_NaviPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				B3B8DAE6208F9523004C4DC6 /* NaviPass */,
 				B3B8DAE5208F9523004C4DC6 /* Products */,
+				CAFC70761393575A5638ADA2 /* Pods */,
+				BF2F135A60B01EB39F813765 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = NaviPass;
 			sourceTree = "<group>";
 		};
+		BF2F135A60B01EB39F813765 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AFF5451EF19356F1AB2E215 /* Pods_NaviPass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAFC70761393575A5638ADA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7544855C009E05795F43DB49 /* Pods-NaviPass.debug.xcconfig */,
+				6C82F8D6F6B98BEF568CC520 /* Pods-NaviPass.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3B8DAF6208F9526004C4DC6 /* Build configuration list for PBXNativeTarget "NaviPass" */;
 			buildPhases = (
+				6A1617879FC2576CD8867587 /* [CP] Check Pods Manifest.lock */,
 				B3B8DAE0208F9523004C4DC6 /* Sources */,
 				B3B8DAE1208F9523004C4DC6 /* Frameworks */,
 				B3B8DAE2208F9523004C4DC6 /* Resources */,
+				035FD8A130AAB5D784BAB35D /* [CP] Embed Pods Frameworks */,
+				81C9FCC7994AA3B67B4C3862 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		035FD8A130AAB5D784BAB35D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NaviPass/Pods-NaviPass-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NaviPass/Pods-NaviPass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A1617879FC2576CD8867587 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NaviPass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81C9FCC7994AA3B67B4C3862 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NaviPass/Pods-NaviPass-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NaviPass/Pods-NaviPass-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3B8DAE0208F9523004C4DC6 /* Sources */ = {
@@ -278,15 +366,13 @@
 		};
 		B3B8DAF7208F9526004C4DC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7544855C009E05795F43DB49 /* Pods-NaviPass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2KW2UV73N;
 				INFOPLIST_FILE = NaviPass/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.c5bt.NaviPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +382,13 @@
 		};
 		B3B8DAF8208F9526004C4DC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C82F8D6F6B98BEF568CC520 /* Pods-NaviPass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2KW2UV73N;
 				INFOPLIST_FILE = NaviPass/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.c5bt.NaviPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
