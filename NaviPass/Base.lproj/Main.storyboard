@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jgh-HF-Sjo">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,21 +10,64 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--NaviPass-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NaviPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GxC-Fa-pth"/>
+                    <navigationItem key="navigationItem" title="NaviPass" id="GxC-Fa-pth">
+                        <barButtonItem key="leftBarButtonItem" title="Setting" id="c2i-GV-ztI">
+                            <connections>
+                                <segue destination="ovp-Pc-rNY" kind="show" id="dKh-nq-BHw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="History" id="g9t-RM-t7y">
+                            <connections>
+                                <segue destination="Sy2-aD-XES" kind="show" id="Ycd-74-0ns"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="117.39130434782609"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="ZEx-cv-PH8">
+            <objects>
+                <viewController id="ovp-Pc-rNY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xU5-Oj-9fA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8k9-9l-PYH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setting" id="qTO-5T-JAZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmM-2s-3kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848.8" y="138.91625615763547"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="F4N-Uk-OSt">
+            <objects>
+                <viewController id="Sy2-aD-XES" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kcq-YA-A20">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="t0P-02-GxX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="JsG-4e-0AB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oc8-LM-las" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2558" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A60-f3-XdH">
@@ -32,7 +75,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jgh-HF-Sjo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QHX-i6-Maa">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
