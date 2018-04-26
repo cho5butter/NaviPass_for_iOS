@@ -1,7 +1,33 @@
-/* 
-  Localizable.strings
-  NaviPass
+/*
+ Localizable.strings
+ NaviPass
+ 
+ Created by cho5butter on 2018/04/25.
+ Copyright © 2018年 ちょこばた. All rights reserved.
+ */
 
-  Created by cho5butter on 2018/04/25.
-  Copyright © 2018年 ちょこばた. All rights reserved.
-*/
+//----------設定画面----------//
+
+//配色
+"settingColor" = "Color";
+"settingColor1" = "Default";
+"settingColor2" = "Cool";
+"settingColor3" = "Cute";
+"settingColor4" = "Light";
+"settingColor1E" = "It is the default color scheme of light blue and orange";
+"settingColor2E" = "It is a dark theme based on black";
+"settingColor3E" = "It is a cute color scheme based on pink";
+"settingColor4E" = "It is a color scheme of white and light blue that is conscious of iOS color scheme";
+
+//広告削除
+
+"settingRemoveAd" = "Delete ad";
+"settingPurchase" = "Purchase and delete ads";
+"settingPurchaseE" = "The advertisement coming on the screen will be hidden when you purchase it";
+
+//サポート
+
+"settingSupport" = "Support";
+"settingSupport2" = "Mail form";
+"settingSupport1E" = "It is the author's Twitter account";
+"settingSupport2E" = "Inquiries are available from mail form";

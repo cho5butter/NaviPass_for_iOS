@@ -10,12 +10,12 @@ import UIKit
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var SettingTitle = [ [NSLocalizedString("settingColor", comment: ""), NSLocalizedString("settingColor1", comment: ""), NSLocalizedString("settingColor2", comment: ""), NSLocalizedString("settingColor3", comment: "")],
+    var SettingTitle = [ [NSLocalizedString("settingColor", comment: ""), NSLocalizedString("settingColor1", comment: ""), NSLocalizedString("settingColor2", comment: ""), NSLocalizedString("settingColor3", comment: ""), NSLocalizedString("settingColor4", comment: "")],
                        [NSLocalizedString("settingRemoveAd", comment: ""), NSLocalizedString("settingPurchase", comment: "")],
                        [NSLocalizedString("settingSupport", comment: ""), "Twitter", NSLocalizedString("settingSupport2", comment: "")]
     ]
     
-    var SettingSubtitle = [ ["", NSLocalizedString("settingColor1E", comment: ""), NSLocalizedString("settingColor2E", comment: ""), NSLocalizedString("settingColor3E", comment: "")],
+    var SettingSubtitle = [ ["", NSLocalizedString("settingColor1E", comment: ""), NSLocalizedString("settingColor2E", comment: ""), NSLocalizedString("settingColor3E", comment: ""), NSLocalizedString("settingColor4E", comment: "")],
                           ["", NSLocalizedString("settingPurchaseE", comment: "")],
                           ["", NSLocalizedString("settingSupport1E", comment: ""), NSLocalizedString("settingSupport2E", comment: "")]
     ]
