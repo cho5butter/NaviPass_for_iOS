@@ -9,6 +9,7 @@ target 'NaviPass' do
   pod 'Firebase'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'SwiftyUserDefaults'
 
   # Pods for NaviPass
 

@@ -14,20 +14,13 @@
 "settingColor2" = "クール";
 "settingColor3" = "キュート";
 "settingColor4" = "ライト";
-"settingColor1E" = "水色とオレンジのデフォルト配色です";
-"settingColor2E" = "黒を基調としたダークテーマです";
-"settingColor3E" = "ピンクを基調とする可愛い配色です";
-"settingColor4E" = "iOSの配色を意識した白と水色の配色です";
 
 //広告削除
 
 "settingRemoveAd" = "広告削除";
 "settingPurchase" = "広告削除を購入する";
-"settingPurchaseE" = "購入すると画面にでてくる広告が非表示になります";
 
 //サポート
 
 "settingSupport" = "サポート";
 "settingSupport2" = "メールフォーム";
-"settingSupport1E" = "作者のTwitterアカウントです";
-"settingSupport2E" = "メールフォームよりお問い合わせが可能です";

@@ -29,22 +29,21 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     func numberOfSections(in tableView: UITableView) -> Int {
         return SettingTitle.count
     }
-    
+    //セルの個数（必須）
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SettingTitle[section].count - 1
     }
-    
+    //セルに値を設定するメソッド（必須）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
         cell.textLabel?.text = SettingTitle[indexPath.section][indexPath.row + 1]
-        cell.detailTextLabel?.text = SettingSubtitle[indexPath.section][indexPath.row + 1]
         return cell
     }
-
+    //タイトルをつけるメソッド
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return SettingTitle[section][0]
     }
-    
+    //選択された時に呼び出されるメソッド（必須）
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
