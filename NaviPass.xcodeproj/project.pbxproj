@@ -10,11 +10,13 @@
 		4E60EB812CE51CDBDE6B15FC /* Pods_NaviPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFF5451EF19356F1AB2E215 /* Pods_NaviPass.framework */; };
 		B3305C6F2090051E006FD8D4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3305C6E2090051E006FD8D4 /* SettingViewController.swift */; };
 		B3305C712090055B006FD8D4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3305C702090055B006FD8D4 /* HistoryViewController.swift */; };
+		B3777E3620DD34B800A96BE1 /* coodinateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3777E3520DD34B800A96BE1 /* coodinateData.swift */; };
 		B3B8DAE8208F9523004C4DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */; };
 		B3B8DAEA208F9523004C4DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8DAE9208F9523004C4DC6 /* ViewController.swift */; };
 		B3B8DAED208F9523004C4DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B8DAEB208F9523004C4DC6 /* Main.storyboard */; };
 		B3B8DAEF208F9526004C4DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B8DAEE208F9526004C4DC6 /* Assets.xcassets */; };
 		B3B8DAF2208F9526004C4DC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B8DAF0208F9526004C4DC6 /* LaunchScreen.storyboard */; };
+		B3B9A68320DD2732008D70E0 /* historyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B9A68220DD2732008D70E0 /* historyData.swift */; };
 		B3EA6E172090B9E7009EFDBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3EA6E192090B9E7009EFDBF /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,7 @@
 		B3305C6B208FF980006FD8D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B3305C6E2090051E006FD8D4 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B3305C702090055B006FD8D4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		B3777E3520DD34B800A96BE1 /* coodinateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = coodinateData.swift; path = "/Users/junya/Google ドライブ/Project/NaviPass/NaviPass/coodinateData.swift"; sourceTree = "<absolute>"; };
 		B3B8DAE4208F9523004C4DC6 /* NaviPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaviPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3B8DAE9208F9523004C4DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +38,7 @@
 		B3B8DAEE208F9526004C4DC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3B8DAF1208F9526004C4DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3B8DAF3208F9526004C4DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3B9A68220DD2732008D70E0 /* historyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyData.swift; sourceTree = "<group>"; };
 		B3EA6E182090B9E7009EFDBF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B3EA6E1A2090B9EC009EFDBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */,
+				B3777E3520DD34B800A96BE1 /* coodinateData.swift */,
+				B3B9A68220DD2732008D70E0 /* historyData.swift */,
 				B3B8DAE9208F9523004C4DC6 /* ViewController.swift */,
 				B3305C6E2090051E006FD8D4 /* SettingViewController.swift */,
 				B3EA6E192090B9E7009EFDBF /* Localizable.strings */,
@@ -181,13 +187,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NaviPass/Pods-NaviPass-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3777E3620DD34B800A96BE1 /* coodinateData.swift in Sources */,
 				B3B8DAEA208F9523004C4DC6 /* ViewController.swift in Sources */,
 				B3B8DAE8208F9523004C4DC6 /* AppDelegate.swift in Sources */,
+				B3B9A68320DD2732008D70E0 /* historyData.swift in Sources */,
 				B3305C6F2090051E006FD8D4 /* SettingViewController.swift in Sources */,
 				B3305C712090055B006FD8D4 /* HistoryViewController.swift in Sources */,
 			);
@@ -406,7 +412,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2KW2UV73N;
 				INFOPLIST_FILE = NaviPass/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.c5bt.NaviPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -422,7 +431,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2KW2UV73N;
 				INFOPLIST_FILE = NaviPass/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.c5bt.NaviPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

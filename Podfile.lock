@@ -32,14 +32,12 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - SwiftyUserDefaults (3.0.1)
 
 DEPENDENCIES:
   - Firebase
   - Firebase/AdMob
   - GoogleMaps
   - GooglePlaces
-  - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   Firebase: 632216af3ed7f31e3be34776947fdc7546cfb572
@@ -51,8 +49,7 @@ SPEC CHECKSUMS:
   GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
 
-PODFILE CHECKSUM: 5cd2129a21c1f34b7010f26c4192b40514c603ab
+PODFILE CHECKSUM: 0ee329501372848c131bf40ca5f08b5053d970cf
 
 COCOAPODS: 1.4.0
