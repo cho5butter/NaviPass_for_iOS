@@ -24,6 +24,7 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
     
     //イニシャライズ
     override init(){
+        super.init()
         self.setUpLocationManager()
         
     }
@@ -48,6 +49,10 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.distanceFilter = kCLDistanceFilterNone
             locationManager.activityType = .fitness
+            
+            //方位精度
+            locationManager.headingFilter = kCLHeadingFilterNone
+            locationManager.headingOrientation = .portrait
             
             //方位と位置の取得開始
             locationManager.startUpdatingLocation()
@@ -85,6 +90,28 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
     //角度取得
     public func getAngle() -> CLLocationDirection {
         return self.nowAngle
+    }
+    
+    //過去データから取得
+    public func getPastData() {
+        //ローカル変数に履歴の配列を格納
+        var historyArray = AppDelegate.memory!.getUserDefaults()
+        
+        if historyArray.isEmpty {
+            print("履歴が存在しません")
+        } else {
+            print("履歴を読み取りました")
+            
+            //一番最新の履歴を読み取り
+            let tmpDic = historyArray[0]
+            //配列に変換
+            let tmpArr = Array(tmpDic.allValues)
+            //最新の履歴をメンバ変数に格納
+            self.recordedLatitude = tmpArr[0] as! CLLocationDegrees
+            self.recordedLongitude = tmpArr[1] as! CLLocationDegrees
+            
+            print("記録されていた座標＝＞緯度：\(self.recordedLatitude)経度：\(self.recordedLongitude)")
+        }
     }
     
 

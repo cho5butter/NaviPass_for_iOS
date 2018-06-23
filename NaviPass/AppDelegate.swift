@@ -12,10 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    static var memory: historyData? //過去データ読み取り
+    static var coodinate: coodinateData?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        memory = historyData() //記録クラスインスタンス化
+        coodinate = coodinateData() //座標取得クラスインスタンス化
+        
         return true
     }
 

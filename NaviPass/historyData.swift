@@ -13,22 +13,24 @@ class historyData:NSObject {
     //ユーザーデフォルトのインスタンス作成
     let defaults = UserDefaults.standard
     //中身があるかの確認
-    let isEmpty:Bool
+    let isEmpty:Bool!
     //情報格納
-    let historyData:Array<NSDictionary>
+    var historyDatas: Array<NSDictionary>!
     
     override init() {
         print("ユーザーデフォルトクラスインスタンス")
         //既に中身が存在するかどうかの確認
-        if self.historyData = defaults.array(forKey: "historyArr") as? Array<NSDictionary>{
+        if let historyData = defaults.array(forKey: "historyArr") as? Array<NSDictionary>{
             isEmpty = false
+            self.historyDatas = historyData
         } else {
             isEmpty = true
+            self.historyDatas = []
         }
     }
     
     public func getUserDefaults() -> Array<NSDictionary>{
         //現在の履歴を取り出す
-        return self.historyData
+        return self.historyDatas
     }
 }
