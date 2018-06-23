@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        memory = historyData() //記録クラスインスタンス化
-        coodinate = coodinateData() //座標取得クラスインスタンス化
+        AppDelegate.memory = historyData() //記録クラスインスタンス化
+        AppDelegate.coodinate = coodinateData() //座標取得クラスインスタンス化
         
         return true
     }
