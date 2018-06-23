@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.memory = historyData() //記録クラスインスタンス化
         AppDelegate.coodinate = coodinateData() //座標取得クラスインスタンス化
         
+        //レイアウト初期設定
+        self.layoutSetup()
+        
         return true
     }
 
@@ -43,6 +46,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    
+    //MARK: - レイアウト
+    
+    private func layoutSetup() {
+        
+        switch AppDelegate.memory?.getSettingData() {
+        case 0:
+            //ナビゲーションバーの色変更
+            UINavigationBar.appearance().barTintColor = UIColor(red: 232/255, green: 111/255, blue: 57/255, alpha: 1)
+            //ナビゲーションアイコンの色変更
+            UINavigationBar.appearance().tintColor = UIColor.white
+            //タイトル色変更
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        default:
+            break
+        }
+        
     }
 
 

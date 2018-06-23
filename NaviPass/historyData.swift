@@ -34,10 +34,10 @@ class historyData:NSObject {
     //履歴の読み込み格納
     private func confirmExistenceOfHistory() {
         //過去履歴が存在しているかの確認
-        if let historyData = defaults.array(forKey: "historyArr") as? Array<NSDictionary>{
+        if UserDefaults.standard.object(forKey: "historyArr") != nil {
             //格納
             print(logStr + "過去データが存在したため、メンバ変数に格納しました")
-            self.historyDatas = historyData
+            self.historyDatas = UserDefaults.standard.array(forKey: "historyArr") as! Array<NSDictionary>
         } else {
             //存在していなかった時
             //空の配列を格納

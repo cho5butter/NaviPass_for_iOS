@@ -12,6 +12,7 @@
 		B3305C712090055B006FD8D4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3305C702090055B006FD8D4 /* HistoryViewController.swift */; };
 		B3777E3620DD34B800A96BE1 /* coodinateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3777E3520DD34B800A96BE1 /* coodinateData.swift */; };
 		B3777E3A20DEA0BE00A96BE1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3777E3920DEA0BD00A96BE1 /* Date.swift */; };
+		B3864FD220DEEA21009B32D5 /* methodClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3864FD120DEEA21009B32D5 /* methodClass.swift */; };
 		B3B8DAE8208F9523004C4DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */; };
 		B3B8DAEA208F9523004C4DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8DAE9208F9523004C4DC6 /* ViewController.swift */; };
 		B3B8DAED208F9523004C4DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B8DAEB208F9523004C4DC6 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		B3305C702090055B006FD8D4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B3777E3520DD34B800A96BE1 /* coodinateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = coodinateData.swift; path = "/Users/junya/Google ドライブ/Project/NaviPass/NaviPass/coodinateData.swift"; sourceTree = "<absolute>"; };
 		B3777E3920DEA0BD00A96BE1 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Date.swift; path = "/Users/junya/Google ドライブ/Project/NaviPass/NaviPass/Date.swift"; sourceTree = "<absolute>"; };
+		B3864FD120DEEA21009B32D5 /* methodClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = methodClass.swift; sourceTree = "<group>"; };
 		B3B8DAE4208F9523004C4DC6 /* NaviPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaviPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3B8DAE9208F9523004C4DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				B3EA6E192090B9E7009EFDBF /* Localizable.strings */,
 				B3305C702090055B006FD8D4 /* HistoryViewController.swift */,
 				B3B8DAEB208F9523004C4DC6 /* Main.storyboard */,
+				B3864FD120DEEA21009B32D5 /* methodClass.swift */,
 				B3B8DAEE208F9526004C4DC6 /* Assets.xcassets */,
 				B3B8DAF0208F9526004C4DC6 /* LaunchScreen.storyboard */,
 				B3B8DAF3208F9526004C4DC6 /* Info.plist */,
@@ -252,6 +255,7 @@
 				B3777E3620DD34B800A96BE1 /* coodinateData.swift in Sources */,
 				B3B8DAEA208F9523004C4DC6 /* ViewController.swift in Sources */,
 				B3777E3A20DEA0BE00A96BE1 /* Date.swift in Sources */,
+				B3864FD220DEEA21009B32D5 /* methodClass.swift in Sources */,
 				B3B8DAE8208F9523004C4DC6 /* AppDelegate.swift in Sources */,
 				B3B9A68320DD2732008D70E0 /* historyData.swift in Sources */,
 				B3305C6F2090051E006FD8D4 /* SettingViewController.swift in Sources */,
