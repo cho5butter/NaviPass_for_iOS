@@ -11,26 +11,64 @@ import UIKit
 class historyData:NSObject {
     
     //ユーザーデフォルトのインスタンス作成
-    let defaults = UserDefaults.standard
-    //中身があるかの確認
-    let isEmpty:Bool!
+    private var defaults: UserDefaults!
     //情報格納
-    var historyDatas: Array<NSDictionary>!
+    private var historyDatas: Array<NSDictionary>!
+    //設定データ
+    private var settingData: Int!
+    //ログ用識別
+    private var logStr = "Class: historyData　"
     
     override init() {
-        print("ユーザーデフォルトクラスインスタンス")
-        //既に中身が存在するかどうかの確認
+        super.init()
+        //ユーザーデフォルトインスタンス生成
+        defaults = UserDefaults.standard
+        
+        print(logStr + "ユーザーデフォルトクラスインスタンス")
+        //履歴の読み込み格納
+        confirmExistenceOfHistory()
+        //過去の設定の読み込み格納
+        confirmExistenceOfSettingData()
+    }
+    
+    //履歴の読み込み格納
+    private func confirmExistenceOfHistory() {
+        //過去履歴が存在しているかの確認
         if let historyData = defaults.array(forKey: "historyArr") as? Array<NSDictionary>{
-            isEmpty = false
+            //格納
+            print(logStr + "過去データが存在したため、メンバ変数に格納しました")
             self.historyDatas = historyData
         } else {
-            isEmpty = true
+            //存在していなかった時
+            //空の配列を格納
+            print(logStr + "過去データが存在しなかったため、空の配列を代入しました")
             self.historyDatas = []
         }
     }
     
+    //過去の設定の読み込み
+    private func confirmExistenceOfSettingData() {
+        //ユーザー設定が存在しているかの確認
+        if UserDefaults.standard.object(forKey: "settingData") != nil {
+            //格納
+            print(logStr + "過去の設定が存在したため、メンバ変数に格納しました")
+            self.settingData = UserDefaults.standard.integer(forKey: "settingData")
+        } else {
+            //初期値を格納
+            print(logStr + "過去の設定が存在しなかったため、初期値を代入しました")
+            self.settingData = 0
+        }
+        
+    }
+    
+    //履歴の取得
     public func getUserDefaults() -> Array<NSDictionary>{
         //現在の履歴を取り出す
         return self.historyDatas
+    }
+    
+    //設定の取得
+    public func getSettingData() -> Int{
+        return self.settingData
     }
 }

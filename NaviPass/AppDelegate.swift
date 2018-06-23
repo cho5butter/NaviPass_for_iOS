@@ -12,13 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    static var memory: historyData? //過去データ読み取り
-    static var coodinate: coodinateData?
+    static var memory: historyData? //記録クラスインスタンス
+    static var coodinate: coodinateData? //座標クラスインスタンス
+    static var settingNumber: Int? //設定情報
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         AppDelegate.memory = historyData() //記録クラスインスタンス化
         AppDelegate.coodinate = coodinateData() //座標取得クラスインスタンス化
+        //設定情報取得
+        AppDelegate.settingNumber = AppDelegate.memory?.getSettingData()
         
         return true
     }

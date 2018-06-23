@@ -14,11 +14,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                        [NSLocalizedString("settingRemoveAd", comment: ""), NSLocalizedString("settingPurchase", comment: "")],
                        [NSLocalizedString("settingSupport", comment: ""), "Twitter", NSLocalizedString("settingSupport2", comment: "")]
     ]
-    
-    var SettingSubtitle = [ ["", NSLocalizedString("settingColor1E", comment: ""), NSLocalizedString("settingColor2E", comment: ""), NSLocalizedString("settingColor3E", comment: ""), NSLocalizedString("settingColor4E", comment: "")],
-                          ["", NSLocalizedString("settingPurchaseE", comment: "")],
-                          ["", NSLocalizedString("settingSupport1E", comment: ""), NSLocalizedString("settingSupport2E", comment: "")]
-    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +32,15 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
         cell.textLabel?.text = SettingTitle[indexPath.section][indexPath.row + 1]
+        
+        //現在設定されている色は選択不可能にする
+        if indexPath.row == AppDelegate.memory?.getSettingData() && indexPath.section == 0 {
+            cell.selectionStyle = .none
+            cell.backgroundColor = .lightGray
+        } else {
+            cell.selectionStyle = .default
+        }
+        
         return cell
     }
     //タイトルをつけるメソッド
