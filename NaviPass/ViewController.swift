@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var arrowImg: UIImageView! //マップ画像
+    @IBOutlet weak var mapImg: UIImageView! //矢印画像
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutSetup()
