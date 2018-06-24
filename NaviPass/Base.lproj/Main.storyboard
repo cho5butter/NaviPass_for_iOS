@@ -57,17 +57,33 @@
                                     <constraint firstAttribute="width" constant="30" id="w8o-dP-F9c"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvx-Yt-5pA">
+                                <rect key="frame" x="154.66666666666666" y="484.66666666666669" width="66.333333333333343" height="33.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLf-sB-MWx">
+                                <rect key="frame" x="167" y="528.33333333333337" width="41.666666666666657" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bdh-Rz-Gyh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="1kZ-K7-d6I"/>
                             <constraint firstItem="9HZ-uJ-YXN" firstAttribute="top" secondItem="zkd-12-t4x" secondAttribute="bottom" constant="50" id="5WM-00-fC9"/>
+                            <constraint firstItem="jLf-sB-MWx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9ka-WP-V7Y"/>
                             <constraint firstItem="Bdh-Rz-Gyh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="OjD-JH-dY4"/>
                             <constraint firstItem="Bdh-Rz-Gyh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" priority="1" id="WTC-TD-UjM"/>
                             <constraint firstItem="zkd-12-t4x" firstAttribute="centerY" secondItem="Bdh-Rz-Gyh" secondAttribute="centerY" id="XIU-li-CwH"/>
                             <constraint firstItem="9HZ-uJ-YXN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iKA-04-drf"/>
                             <constraint firstAttribute="trailing" secondItem="Bdh-Rz-Gyh" secondAttribute="trailing" constant="25" id="iaS-2l-ikD"/>
                             <constraint firstItem="Bdh-Rz-Gyh" firstAttribute="centerX" secondItem="zkd-12-t4x" secondAttribute="centerX" id="iuD-zT-6sH"/>
+                            <constraint firstItem="jLf-sB-MWx" firstAttribute="top" secondItem="Lvx-Yt-5pA" secondAttribute="bottom" constant="10" id="lxD-Zf-Mkv"/>
+                            <constraint firstItem="Lvx-Yt-5pA" firstAttribute="top" secondItem="9HZ-uJ-YXN" secondAttribute="bottom" constant="40" id="pOb-xV-k5B"/>
+                            <constraint firstItem="Lvx-Yt-5pA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uKQ-YG-NeG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -85,7 +101,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="arrowImg" destination="9HZ-uJ-YXN" id="QbO-bw-bLl"/>
+                        <outlet property="mainLabel" destination="Lvx-Yt-5pA" id="4ox-0V-J1Y"/>
                         <outlet property="mapImg" destination="zkd-12-t4x" id="1Uf-0m-gmm"/>
+                        <outlet property="subLabel" destination="jLf-sB-MWx" id="kQV-Nx-wBl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

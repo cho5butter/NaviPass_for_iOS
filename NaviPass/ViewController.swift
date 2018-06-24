@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var arrowImg: UIImageView! //マップ画像
     @IBOutlet weak var mapImg: UIImageView! //矢印画像
+    @IBOutlet weak var mainLabel: UILabel! //距離表示ラベル
+    @IBOutlet weak var subLabel: UILabel! //記録時刻表示ラベル
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,12 @@ class ViewController: UIViewController {
     
     //MARK: - レイアウト
     private func layoutSetup() {
+        backgroundColor()
+        iconTheme()
+    }
+    
+    
+    private func backgroundColor() {
         //背景色
         switch AppDelegate.memory?.getSettingData() {
         case 0:
@@ -35,6 +43,19 @@ class ViewController: UIViewController {
         }
     }
     
+    private func iconTheme() {
+        //テーマごとの画像
+        switch AppDelegate.memory?.getSettingData() {
+        case 0:
+            arrowImg.image = UIImage(named: "arrowImg")
+            mapImg.image = UIImage(named: "map icon")
+            mainLabel.textColor = UIColor.white
+            subLabel.textColor = UIColor.white
+            subLabel.adjustsFontSizeToFitWidth = true //文字サイズ自動調整
+        default:
+            break
+        }
+    }
 
 
 }
