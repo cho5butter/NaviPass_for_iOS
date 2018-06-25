@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowImg" translatesAutoresizingMaskIntoConstraints="NO" id="9HZ-uJ-YXN">
-                                <rect key="frame" x="70" y="210.66666666666663" width="234" height="234"/>
+                                <rect key="frame" x="70.666666666666686" y="210.66666666666663" width="234" height="234"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="234" id="Ec8-sw-ErI"/>
                                     <constraint firstAttribute="height" constant="234" id="dGk-Rw-fsp"/>
@@ -58,24 +58,35 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvx-Yt-5pA">
-                                <rect key="frame" x="154.66666666666666" y="484.66666666666669" width="66.333333333333343" height="33.666666666666686"/>
+                                <rect key="frame" x="154.66666666666666" y="484.66666666666669" width="66" height="34.000000000000057"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLf-sB-MWx">
-                                <rect key="frame" x="167" y="528.33333333333337" width="41.666666666666657" height="20.333333333333371"/>
+                                <rect key="frame" x="166.66666666666666" y="528.66666666666663" width="42" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ca-VX-nVb">
+                                <rect key="frame" x="37" y="633" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.52008229494094849" green="0.30164167284965515" blue="0.61286687850952148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="48m-8p-nT0"/>
+                                    <constraint firstAttribute="height" constant="60" id="MNZ-co-Uni"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bdh-Rz-Gyh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="1kZ-K7-d6I"/>
                             <constraint firstItem="9HZ-uJ-YXN" firstAttribute="top" secondItem="zkd-12-t4x" secondAttribute="bottom" constant="50" id="5WM-00-fC9"/>
                             <constraint firstItem="jLf-sB-MWx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9ka-WP-V7Y"/>
+                            <constraint firstItem="4Ca-VX-nVb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mb1-l4-ma0"/>
                             <constraint firstItem="Bdh-Rz-Gyh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="OjD-JH-dY4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Ca-VX-nVb" secondAttribute="bottom" constant="85" id="QMU-hK-wbd"/>
                             <constraint firstItem="Bdh-Rz-Gyh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" priority="1" id="WTC-TD-UjM"/>
                             <constraint firstItem="zkd-12-t4x" firstAttribute="centerY" secondItem="Bdh-Rz-Gyh" secondAttribute="centerY" id="XIU-li-CwH"/>
                             <constraint firstItem="9HZ-uJ-YXN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iKA-04-drf"/>
@@ -103,6 +114,7 @@
                         <outlet property="arrowImg" destination="9HZ-uJ-YXN" id="QbO-bw-bLl"/>
                         <outlet property="mainLabel" destination="Lvx-Yt-5pA" id="4ox-0V-J1Y"/>
                         <outlet property="mapImg" destination="zkd-12-t4x" id="1Uf-0m-gmm"/>
+                        <outlet property="recordButton" destination="4Ca-VX-nVb" id="22Z-MD-YBY"/>
                         <outlet property="subLabel" destination="jLf-sB-MWx" id="kQV-Nx-wBl"/>
                     </connections>
                 </viewController>
