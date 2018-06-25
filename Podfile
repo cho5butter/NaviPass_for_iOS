@@ -10,6 +10,7 @@ target 'NaviPass' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'SwiftDate'
+  pod 'PopupDialog', '~> 0.6'
 
   # Pods for NaviPass
 

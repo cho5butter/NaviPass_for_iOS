@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         AppDelegate.memory = historyData() //記録クラスインスタンス化
         AppDelegate.coodinate = coodinateData() //座標取得クラスインスタンス化
+        AppDelegate.coodinate?.getPastData() //過去データ取得
         
         //レイアウト初期設定
         self.layoutSetup()

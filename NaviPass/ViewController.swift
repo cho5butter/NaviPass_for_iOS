@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutSetup()
+        Timer.scheduledTimer(timeInterval: 10/1000, target: self, selector: #selector(ViewController.timerUpdate), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -59,7 +60,34 @@ class ViewController: UIViewController {
             break
         }
     }
-
-
+    
+    //MARK: - ボタンタップ処理
+    @IBAction func recordButton(_ sender: Any) {
+        
+    }
+    
+    //MARK: - タイマー
+    @objc func timerUpdate () {
+        if !(AppDelegate.memory?.getUserDefaults().isEmpty)!{
+            updateDistanceLabel()
+            updateTimeLabel()
+        }
+    }
+    
+    private func updateDistanceLabel() {
+        let tmpInfo = AppDelegate.coodinate?.calcDistance()
+        let tmpDistance = Int((tmpInfo?.distance)!)
+        mainLabel.text = String(tmpDistance)
+        rotateArrowImage(angle: (tmpInfo?.angle)!)
+    }
+    
+    private func updateTimeLabel() {
+        
+    }
+    
+    private func rotateArrowImage(angle: Double) {
+        arrowImg.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+    }
+    
 }
 

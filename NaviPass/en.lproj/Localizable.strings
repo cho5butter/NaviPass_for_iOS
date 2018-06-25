@@ -24,3 +24,8 @@
 
 "settingSupport" = "Support";
 "settingSupport2" = "Mail form";
+
+//課金
+
+"settingAlertTitle" = "I'm sorry";
+"settingAlertMessage" = "Currently this feature is not implemented";

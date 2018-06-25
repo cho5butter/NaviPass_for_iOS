@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PopupDialog
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -52,36 +53,29 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     //選択された時に呼び出されるメソッド（必須）
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //色設定保持
-        if indexPath.row <= 3 && indexPath.section == 0 {
+        print("indexPath.row:\(indexPath.row), indexPath.section:\(indexPath.section)")
+        if indexPath.section == 0 {
+            //色設定
             if indexPath.row != AppDelegate.memory?.getSettingData() {
                 AppDelegate.memory?.setSettingData(settingNumber: indexPath.row)
                 settingTable.reloadData()
             }
-        }
-        
-        //サポート
-        if indexPath.row <= 1 && indexPath.section == 2 {
-            if indexPath.row == 0 {
-                openTwitter()
-            } else {
-                openBrowser()
+        } else if indexPath.section == 1 {
+            //課金設定
+            let popup = PopupDialog(title:NSLocalizedString("settingAlertTitle", comment: ""), message:NSLocalizedString("settingAlertMessage", comment: ""))
+            let button = CancelButton(title: "CLOSE") {
             }
-        }
-    }
-    
-    //MARK: - サポート
-    //Twitterアプリを開く
-    private func openTwitter() {
-        if UIApplication.shared.canOpenURL(URL(string: "twitter://")!) {
-            print("Twitter インストール済み")
+            popup.addButton(button)
+            present(popup, animated: true, completion: nil)
         } else {
-            print("Twitter インストールされていない")
+            //サポート設定
+            if indexPath.row == 0 {
+                methodClass.openTwitter(twitterId: "152635614")
+            } else {
+                methodClass.openBrowser(url: "c5bt.net/contact")
+            }
+            
         }
-    }
-    
-    //ウエブページを開く
-    private func openBrowser() {
         
     }
     

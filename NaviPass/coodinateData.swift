@@ -114,5 +114,43 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
         }
     }
     
-
+    //距離計算
+    public func calcDistance() -> (distance: Double, angle: Double) {
+        var resultDistance: Double = 0
+        var resultAngle: Double = 0
+        
+        let tmpLat = self.recordedLatitude - self.nowLatitude
+        let tmpLon = self.recordedLongitude - self.nowLatitude
+        
+        let SILat = convertSI(coordinate: tmpLat, mode: 0)
+        let SILon = convertSI(coordinate: tmpLon, mode: 1)
+        
+        resultDistance = sqrt(pow(abs(SILat),2)+pow(abs(SILon),2))
+        resultAngle = methodClass.toDegree(radian: atan2(tmpLat, tmpLon)) - self.nowAngle
+        return (resultDistance, resultAngle)
+    }
+    
+    private func convertSI(coordinate: Double, mode: Int) -> Double {
+        var tmpDistance = coordinate * correctionFactor(mode: mode)
+        if mode == 1 {
+            //赤道外補正
+            let tmpLat = self.recordedLatitude + self.nowLatitude
+            let absAngle = abs(tmpLat/2)
+            let radianAngle = methodClass.toRadian(degree: absAngle)
+            tmpDistance *= cos(radianAngle)
+        }
+        return tmpDistance
+    }
+    
+    private func correctionFactor(mode: Int) -> Double {
+        //http://blog.netandfield.com/shar/2014/04/post-1789.html
+        if mode == 0 {
+            //緯度　極半径=>直径=>m換算=>1度あたりの距離
+            return 6356.752 * 2 * 3.1415 * 1000 / 360
+        } else {
+            //経度　赤道半径=>直径=>m換算=>1度あたりの距離
+            return 6378.137 * 2 * 3.1415 * 1000 / 360
+        }
+    }
+    
 }

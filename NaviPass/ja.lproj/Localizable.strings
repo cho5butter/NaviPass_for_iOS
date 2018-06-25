@@ -24,3 +24,8 @@
 
 "settingSupport" = "サポート";
 "settingSupport2" = "メールフォーム";
+
+//課金
+
+"settingAlertTitle" = "申し訳ありません";
+"settingAlertMessage" = "現在この機能は実装されていません";
