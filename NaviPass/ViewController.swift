@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     //MARK: - レイアウト
-    private func layoutSetup() {
+    public func layoutSetup() {
         backgroundColor()
         iconTheme()
     }

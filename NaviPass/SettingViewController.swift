@@ -10,6 +10,8 @@ import UIKit
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var settingTable: UITableView!
+    
     var SettingTitle = [ [NSLocalizedString("settingColor", comment: ""), NSLocalizedString("settingColor1", comment: ""), NSLocalizedString("settingColor2", comment: ""), NSLocalizedString("settingColor3", comment: ""), NSLocalizedString("settingColor4", comment: "")],
                        [NSLocalizedString("settingRemoveAd", comment: ""), NSLocalizedString("settingPurchase", comment: "")],
                        [NSLocalizedString("settingSupport", comment: ""), "Twitter", NSLocalizedString("settingSupport2", comment: "")]
@@ -50,7 +52,39 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     //選択された時に呼び出されるメソッド（必須）
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        //色設定保持
+        if indexPath.row <= 3 && indexPath.section == 0 {
+            if indexPath.row != AppDelegate.memory?.getSettingData() {
+                AppDelegate.memory?.setSettingData(settingNumber: indexPath.row)
+                settingTable.reloadData()
+            }
+        }
+        
+        //サポート
+        if indexPath.row <= 1 && indexPath.section == 2 {
+            if indexPath.row == 0 {
+                openTwitter()
+            } else {
+                openBrowser()
+            }
+        }
     }
+    
+    //MARK: - サポート
+    //Twitterアプリを開く
+    private func openTwitter() {
+        if UIApplication.shared.canOpenURL(URL(string: "twitter://")!) {
+            print("Twitter インストール済み")
+        } else {
+            print("Twitter インストールされていない")
+        }
+    }
+    
+    //ウエブページを開く
+    private func openBrowser() {
+        
+    }
+    
     
 
 }

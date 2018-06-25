@@ -49,6 +49,9 @@
                                         <size key="value" width="1" height="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ttk-Ti-6nQ" kind="show" id="ey3-ul-LrO"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map icon" translatesAutoresizingMaskIntoConstraints="NO" id="zkd-12-t4x">
                                 <rect key="frame" x="302.66666666666669" y="130.66666666666666" width="30" height="30"/>
@@ -101,7 +104,7 @@
                     <navigationItem key="navigationItem" title="NaviPass" id="GxC-Fa-pth">
                         <barButtonItem key="leftBarButtonItem" title="Setting" id="c2i-GV-ztI">
                             <connections>
-                                <segue destination="ovp-Pc-rNY" kind="show" id="dKh-nq-BHw"/>
+                                <segue destination="ovp-Pc-rNY" kind="show" id="fRF-kD-dZH"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="History" id="g9t-RM-t7y">
@@ -145,11 +148,34 @@
                             <outlet property="delegate" destination="ovp-Pc-rNY" id="ipi-cn-aek"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Setting" id="qTO-5T-JAZ"/>
+                    <navigationItem key="navigationItem" title="Setting" id="qTO-5T-JAZ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="vaz-um-ThM"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="settingTable" destination="5wQ-sG-NZg" id="WVj-Tz-LeM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmM-2s-3kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1848.8" y="138.91625615763547"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="SV9-Tt-w0V">
+            <objects>
+                <viewController id="ttk-Ti-6nQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j5e-mO-HG1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pXR-Ee-wAJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="peQ-fg-NGw">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ZqX-ew-GtU"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXW-ZO-dNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3231" y="129"/>
         </scene>
         <!--History-->
         <scene sceneID="F4N-Uk-OSt">
@@ -161,7 +187,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="t0P-02-GxX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="History" id="JsG-4e-0AB"/>
+                    <navigationItem key="navigationItem" title="History" id="JsG-4e-0AB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Av3-Fu-C2r"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc8-LM-las" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

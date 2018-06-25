@@ -1,11 +1,13 @@
 //トップ画面
-"GxC-Fa-pth.txt" = "NaviPass";
+"GxC-Fa-pth.title" = "NaviPass";
 "c2i-GV-ztI.text" = "Setting";
 "g9t-RM-t7y.text" = "History";
 "Lvx-Yt-5pA.text" = "Thre is no data";
 "jLf-sB-MWx.text" = "Record your current location and start using it!";
 "4Ca-VX-nVb.normalTitle" = "Record your location";
 //設定画面
-"qTO-5T-JAZ.text" = "Setting";
+"qTO-5T-JAZ.title" = "Setting";
 //履歴画面
-"JsG-4e-0AB.text" = "History";
+"JsG-4e-0AB.title" = "History";
+//マップ画面
+"peQ-fg-NGw.title" = "Map";

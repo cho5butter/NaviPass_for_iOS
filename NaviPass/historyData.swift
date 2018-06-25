@@ -71,4 +71,10 @@ class historyData:NSObject {
     public func getSettingData() -> Int{
         return self.settingData
     }
+    
+    //設定の記録
+    public func setSettingData(settingNumber: Int) {
+        self.settingData = settingNumber
+        UserDefaults.standard.set(settingNumber, forKey: "settingData")
+    }
 }

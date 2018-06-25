@@ -1,11 +1,13 @@
 //トップ画面
-"GxC-Fa-pth.text" = "ナビパス";
+"GxC-Fa-pth.title" = "ナビパス";
 "c2i-GV-ztI.text" = "設定";
 "g9t-RM-t7y.text" = "履歴";
 "Lvx-Yt-5pA.text" = "データがありません";
 "jLf-sB-MWx.text" = "現在地を記録し，利用を開始しましょう！";
 "4Ca-VX-nVb.normalTitle" = "現在地を記録する";
 //設定画面
-"qTO-5T-JAZ.text" = "設定";
+"qTO-5T-JAZ.title" = "設定";
 //履歴画面
-"JsG-4e-0AB.text" = "履歴";
+"JsG-4e-0AB.title" = "履歴";
+//マップ画面
+"peQ-fg-NGw.title" = "マップ";
