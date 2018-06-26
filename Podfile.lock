@@ -35,7 +35,6 @@ PODS:
   - nanopb/encode (0.3.8)
   - PopupDialog (0.7.1):
     - DynamicBlurView (~> 2.0)
-  - SwiftDate (4.5.1)
 
 DEPENDENCIES:
   - Firebase
@@ -43,7 +42,6 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - PopupDialog (~> 0.6)
-  - SwiftDate
 
 SPEC CHECKSUMS:
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
@@ -57,8 +55,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
-  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
 
-PODFILE CHECKSUM: 3ba3fc4a3518616126f1992a9f40bf9e6dc0e7cf
+PODFILE CHECKSUM: 361953c7a5140dc978a1cc815150883af528fae9
 
 COCOAPODS: 1.4.0
