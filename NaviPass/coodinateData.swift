@@ -104,11 +104,9 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
             
             //一番最新の履歴を読み取り
             let tmpDic = historyArray[0]
-            //配列に変換
-            let tmpArr = Array(tmpDic.allValues)
             //最新の履歴をメンバ変数に格納
-            self.recordedLatitude = tmpArr[0] as! CLLocationDegrees
-            self.recordedLongitude = tmpArr[1] as! CLLocationDegrees
+            self.recordedLatitude = tmpDic["latitude"] as! CLLocationDegrees
+            self.recordedLongitude = tmpDic["longitude"] as! CLLocationDegrees
             
             print("記録されていた座標＝＞緯度：\(self.recordedLatitude)経度：\(self.recordedLongitude)")
         }

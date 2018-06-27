@@ -20,8 +20,7 @@ class timeClass: UIViewController {
         } else {
             print("履歴を読み取りました")
             let tmpDic = historyArray[0]
-            let tmpArr = Array(tmpDic)
-            self.recordedDate = tmpArr[3] as! Date
+            self.recordedDate = tmpDic["time"] as! Date
             
             print("記録されていた時間=>\(self.recordedDate)")
         }
