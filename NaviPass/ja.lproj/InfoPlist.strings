@@ -7,4 +7,4 @@
 */
 
 CFBundleDisplayName = "ナビパス";
-NSLocationWhenInUseUsageDescription = "地点の記録と、その場所までの案内にGPSを使用します"
+NSLocationWhenInUseUsageDescription = "地点の記録と、その場所までの案内にGPSを使用します";

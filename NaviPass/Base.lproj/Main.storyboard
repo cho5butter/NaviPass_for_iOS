@@ -105,6 +105,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="NaviPass" id="GxC-Fa-pth">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7DB-OS-VGI"/>
                         <barButtonItem key="leftBarButtonItem" title="Setting" id="c2i-GV-ztI">
                             <connections>
                                 <segue destination="ovp-Pc-rNY" kind="show" id="fRF-kD-dZH"/>

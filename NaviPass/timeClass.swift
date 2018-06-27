@@ -10,7 +10,7 @@ import UIKit
 
 class timeClass: UIViewController {
     
-    private var recordedDate: NSDate!
+    private var recordedDate: Date!
     
     public func getPastData() {
         //ローカル変数に履歴の配列を格納
@@ -20,17 +20,25 @@ class timeClass: UIViewController {
         } else {
             print("履歴を読み取りました")
             let tmpDic = historyArray[0]
-            let tmpArr = Array(tmpDic.allValues)
-            self.recordedDate = tmpArr[3] as! NSDate
+            let tmpArr = Array(tmpDic)
+            self.recordedDate = tmpArr[3] as! Date
             
             print("記録されていた時間=>\(self.recordedDate)")
         }
     }
     
-    public func calcElapsedTime() -> Double {
+    public func calcElapsedTime() -> (elapsedTime: TimeInterval, recordedTime: Date) {
         let elapsedTime = self.recordedDate.timeIntervalSinceNow
         
-        return elapsedTime
+        return (elapsedTime, self.recordedDate)
+    }
+    
+    public func getNowData() -> Date {
+        return Date()
+    }
+    
+    public func recordNowData() {
+        self.recordedDate = Date()
     }
 
 }

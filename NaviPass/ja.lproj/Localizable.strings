@@ -29,3 +29,12 @@
 
 "settingAlertTitle" = "申し訳ありません";
 "settingAlertMessage" = "現在この機能は実装されていません";
+
+//----------メイン画面-----------//
+
+//戻るボタン
+"backButton" = "戻る";
+
+//現在地の取得失敗警告
+"mainAlertTitle" = "申し訳ありません";
+"mainAlertMessage" = "現在地が正常に取得できていません";

@@ -14,12 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     static var memory: historyData? //記録クラスインスタンス
     static var coodinate: coodinateData? //座標クラスインスタンス
+    static var time: timeClass? //時間クラスインスタンス
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         AppDelegate.memory = historyData() //記録クラスインスタンス化
         AppDelegate.coodinate = coodinateData() //座標取得クラスインスタンス化
+        AppDelegate.time = timeClass() //時間クラスをインスタンス化
         AppDelegate.coodinate?.getPastData() //過去データ取得
+        AppDelegate.time?.getPastData() //過去時間取得
         
         //レイアウト初期設定
         AppDelegate.layoutSetup()

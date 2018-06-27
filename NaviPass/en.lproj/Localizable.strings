@@ -29,3 +29,13 @@
 
 "settingAlertTitle" = "I'm sorry";
 "settingAlertMessage" = "Currently this feature is not implemented";
+
+//----------メイン画面-----------//
+
+//戻るボタン
+"backButton" = "Back";
+
+//現在地の取得失敗警告
+"mainAlertTitle" = "I'm sorry";
+"mainAlertMessage" = "Your current location has not been successfully acquired";
+

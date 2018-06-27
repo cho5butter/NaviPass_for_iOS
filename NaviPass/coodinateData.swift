@@ -153,4 +153,10 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    //現在地を記録
+    public func recordNowCoordinates() {
+        self.recordedLatitude = self.nowLatitude
+        self.recordedLongitude = self.nowLongitude
+    }
+    
 }

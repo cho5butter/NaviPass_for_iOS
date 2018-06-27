@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PopupDialog
 
 class ViewController: UIViewController {
 
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
     public func layoutSetup() {
         backgroundColor()
         iconTheme()
-        print("レイアウトセットアップの実行：\(String(describing: AppDelegate.memory?.getSettingData()))")
+        navigationItem.backBarButtonItem?.title = NSLocalizedString("backButton", comment: "")
     }
     
     
@@ -66,7 +67,11 @@ class ViewController: UIViewController {
     
     //MARK: - ボタンタップ処理
     @IBAction func recordButton(_ sender: Any) {
-        
+        if (AppDelegate.coodinate?.getLatitude()) != nil {
+            AppDelegate.memory?.saveNowPoint()
+        } else {
+            self.showPopup()
+        }
     }
     
     //MARK: - タイマー
@@ -90,6 +95,16 @@ class ViewController: UIViewController {
     
     private func rotateArrowImage(angle: Double) {
         arrowImg.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+    }
+    
+    //MARK: - ポップアップ
+    
+    private func showPopup() {
+        let popup = PopupDialog(title:NSLocalizedString("mainAlertTitle", comment: ""), message:NSLocalizedString("mainAlertMessage", comment: ""))
+        let button = CancelButton(title: "CLOSE") {
+        }
+        popup.addButton(button)
+        present(popup, animated: true, completion: nil)
     }
     
 }
