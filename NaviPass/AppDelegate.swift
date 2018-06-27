@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.coodinate?.getPastData() //過去データ取得
         
         //レイアウト初期設定
-        self.layoutSetup()
+        AppDelegate.layoutSetup()
         
         return true
     }
@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //MARK: - レイアウト
     
-    private func layoutSetup() {
+    static public func layoutSetup() {
         
         switch AppDelegate.memory?.getSettingData() {
         case 0:

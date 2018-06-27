@@ -10,9 +10,10 @@
 		4E60EB812CE51CDBDE6B15FC /* Pods_NaviPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFF5451EF19356F1AB2E215 /* Pods_NaviPass.framework */; };
 		B3305C6F2090051E006FD8D4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3305C6E2090051E006FD8D4 /* SettingViewController.swift */; };
 		B3305C712090055B006FD8D4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3305C702090055B006FD8D4 /* HistoryViewController.swift */; };
+		B352FD2C20E3C1B800A7A29E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B352FD2B20E3C1B800A7A29E /* CoreLocation.framework */; };
+		B352FD2F20E3C2E900A7A29E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B352FD3120E3C2E900A7A29E /* InfoPlist.strings */; };
 		B3777E3620DD34B800A96BE1 /* coodinateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3777E3520DD34B800A96BE1 /* coodinateData.swift */; };
 		B3864FD220DEEA21009B32D5 /* methodClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3864FD120DEEA21009B32D5 /* methodClass.swift */; };
-		B39A649120E0DE0700BD4527 /* alertPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A649020E0DE0700BD4527 /* alertPopup.swift */; };
 		B39A649320E1C60900BD4527 /* timeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A649220E1C60900BD4527 /* timeClass.swift */; };
 		B3B8DAE8208F9523004C4DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */; };
 		B3B8DAEA208F9523004C4DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8DAE9208F9523004C4DC6 /* ViewController.swift */; };
@@ -33,9 +34,10 @@
 		B3305C6B208FF980006FD8D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B3305C6E2090051E006FD8D4 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B3305C702090055B006FD8D4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		B352FD2B20E3C1B800A7A29E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B352FD3020E3C2E900A7A29E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B3777E3520DD34B800A96BE1 /* coodinateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = coodinateData.swift; path = "/Users/junya/Google ドライブ/Project/NaviPass/NaviPass/coodinateData.swift"; sourceTree = "<absolute>"; };
 		B3864FD120DEEA21009B32D5 /* methodClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = methodClass.swift; sourceTree = "<group>"; };
-		B39A649020E0DE0700BD4527 /* alertPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertPopup.swift; sourceTree = "<group>"; };
 		B39A649220E1C60900BD4527 /* timeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeClass.swift; sourceTree = "<group>"; };
 		B3B8DAE4208F9523004C4DC6 /* NaviPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaviPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B352FD2C20E3C1B800A7A29E /* CoreLocation.framework in Frameworks */,
 				4E60EB812CE51CDBDE6B15FC /* Pods_NaviPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				B39A649220E1C60900BD4527 /* timeClass.swift */,
-				B39A649020E0DE0700BD4527 /* alertPopup.swift */,
 				B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */,
 				B3777E3520DD34B800A96BE1 /* coodinateData.swift */,
 				B3B9A68220DD2732008D70E0 /* historyData.swift */,
@@ -96,6 +98,7 @@
 				B3B8DAEE208F9526004C4DC6 /* Assets.xcassets */,
 				B3B8DAF0208F9526004C4DC6 /* LaunchScreen.storyboard */,
 				B3B8DAF3208F9526004C4DC6 /* Info.plist */,
+				B352FD3120E3C2E900A7A29E /* InfoPlist.strings */,
 			);
 			path = NaviPass;
 			sourceTree = "<group>";
@@ -103,6 +106,7 @@
 		BF2F135A60B01EB39F813765 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B352FD2B20E3C1B800A7A29E /* CoreLocation.framework */,
 				5AFF5451EF19356F1AB2E215 /* Pods_NaviPass.framework */,
 			);
 			name = Frameworks;
@@ -182,6 +186,7 @@
 				B3EA6E172090B9E7009EFDBF /* Localizable.strings in Resources */,
 				B3B8DAEF208F9526004C4DC6 /* Assets.xcassets in Resources */,
 				B3B8DAED208F9523004C4DC6 /* Main.storyboard in Resources */,
+				B352FD2F20E3C2E900A7A29E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +264,6 @@
 			files = (
 				B3777E3620DD34B800A96BE1 /* coodinateData.swift in Sources */,
 				B3B8DAEA208F9523004C4DC6 /* ViewController.swift in Sources */,
-				B39A649120E0DE0700BD4527 /* alertPopup.swift in Sources */,
 				B3864FD220DEEA21009B32D5 /* methodClass.swift in Sources */,
 				B3B8DAE8208F9523004C4DC6 /* AppDelegate.swift in Sources */,
 				B39A649320E1C60900BD4527 /* timeClass.swift in Sources */,
@@ -272,6 +276,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B352FD3120E3C2E900A7A29E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B352FD3020E3C2E900A7A29E /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		B3B8DAEB208F9523004C4DC6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

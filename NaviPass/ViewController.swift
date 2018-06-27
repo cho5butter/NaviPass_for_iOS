@@ -22,16 +22,19 @@ class ViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 10/1000, target: self, selector: #selector(ViewController.timerUpdate), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.layoutSetup()
+        print("viewWillAppear")
+        AppDelegate.layoutSetup()
+        
     }
     
     //MARK: - レイアウト
     public func layoutSetup() {
         backgroundColor()
         iconTheme()
+        print("レイアウトセットアップの実行：\(String(describing: AppDelegate.memory?.getSettingData()))")
     }
     
     
