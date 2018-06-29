@@ -43,5 +43,13 @@ class methodClass: UIViewController {
     static public func toDegree(radian: Double) -> Double {
         return radian * 180 / Double.pi
     }
+    
+    //MARK: - 経過時間整形
+    static public func convertElapsed(interval: TimeInterval) -> (hour: Int, minute: Int, second: Int) {
+        let hh = Int(interval/3600)
+        let mm = Int((interval - Double(hh * 3600)) / 60)
+        let ss = Int(interval - Double(hh * 3600 + mm * 60))
+        return (hh, mm, ss)
+    }
 
 }

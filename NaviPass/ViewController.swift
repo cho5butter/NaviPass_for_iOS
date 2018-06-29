@@ -90,7 +90,18 @@ class ViewController: UIViewController {
     }
     
     private func updateTimeLabel() {
-        
+        let tmpTime = AppDelegate.time?.calcElapsedTime()
+        let tmpElap = tmpTime?.elapsedTime
+        let tmpRec = tmpTime?.recordedTime
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "EE MM d", options: 0, locale: NSLocale.current)
+        let strTime = timeFormatter.string(from: tmpRec!)
+        let convertedElap = methodClass.convertElapsed(interval: tmpElap!)
+        let elapsedFormatter = DateFormatter()
+        elapsedFormatter.dateFormat = "HHmmss"
+        let dataElap = elapsedFormatter.date(from: "\(convertedElap.hour)\(convertedElap.minute)\(convertedElap.second)")
+        let strElap = timeFormatter.string(from: dataElap!)
+        subLabel.text = strElap + "(" + strTime + ")"
     }
     
     private func rotateArrowImage(angle: Double) {
