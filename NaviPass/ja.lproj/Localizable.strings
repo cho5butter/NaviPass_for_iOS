@@ -38,3 +38,10 @@
 //現在地の取得失敗警告
 "mainAlertTitle" = "申し訳ありません";
 "mainAlertMessage" = "現在地が正常に取得できていません";
+
+//---------履歴画面-----------//
+
+//セルラベル
+"historyAddressLabel" = "履歴がありません";
+"historyTimeLabel" = "ここに記録場所の履歴が残ります";
+

@@ -14,6 +14,7 @@
 		B352FD2F20E3C2E900A7A29E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B352FD3120E3C2E900A7A29E /* InfoPlist.strings */; };
 		B36550F720E7484700F474FD /* themeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36550F620E7484700F474FD /* themeColor.swift */; };
 		B3777E3620DD34B800A96BE1 /* coodinateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3777E3520DD34B800A96BE1 /* coodinateData.swift */; };
+		B38143F720E7B3B900AAA76D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38143F620E7B3B900AAA76D /* MapViewController.swift */; };
 		B3864FD220DEEA21009B32D5 /* methodClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3864FD120DEEA21009B32D5 /* methodClass.swift */; };
 		B39A649320E1C60900BD4527 /* timeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A649220E1C60900BD4527 /* timeClass.swift */; };
 		B3B8DAE8208F9523004C4DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 		B352FD3020E3C2E900A7A29E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B36550F620E7484700F474FD /* themeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = themeColor.swift; sourceTree = "<group>"; };
 		B3777E3520DD34B800A96BE1 /* coodinateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = coodinateData.swift; path = "/Users/junya/Google ドライブ/Project/NaviPass/NaviPass/coodinateData.swift"; sourceTree = "<absolute>"; };
+		B38143F620E7B3B900AAA76D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B3864FD120DEEA21009B32D5 /* methodClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = methodClass.swift; sourceTree = "<group>"; };
 		B39A649220E1C60900BD4527 /* timeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeClass.swift; sourceTree = "<group>"; };
 		B3B8DAE4208F9523004C4DC6 /* NaviPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaviPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 				B3305C6E2090051E006FD8D4 /* SettingViewController.swift */,
 				B3EA6E192090B9E7009EFDBF /* Localizable.strings */,
 				B3305C702090055B006FD8D4 /* HistoryViewController.swift */,
+				B38143F620E7B3B900AAA76D /* MapViewController.swift */,
 				B3B8DAEB208F9523004C4DC6 /* Main.storyboard */,
 				B3864FD120DEEA21009B32D5 /* methodClass.swift */,
 				B3B8DAEE208F9526004C4DC6 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 				B3777E3620DD34B800A96BE1 /* coodinateData.swift in Sources */,
 				B3B8DAEA208F9523004C4DC6 /* ViewController.swift in Sources */,
 				B3864FD220DEEA21009B32D5 /* methodClass.swift in Sources */,
+				B38143F720E7B3B900AAA76D /* MapViewController.swift in Sources */,
 				B3B8DAE8208F9523004C4DC6 /* AppDelegate.swift in Sources */,
 				B39A649320E1C60900BD4527 /* timeClass.swift in Sources */,
 				B3B9A68320DD2732008D70E0 /* historyData.swift in Sources */,

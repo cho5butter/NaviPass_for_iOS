@@ -39,3 +39,8 @@
 "mainAlertTitle" = "I'm sorry";
 "mainAlertMessage" = "Your current location has not been successfully acquired";
 
+//---------履歴画面-----------//
+
+//セルラベル
+"historyAddressLabel" = "There is no history";
+"historyTimeLabel" = "History of recording place will remain here";
