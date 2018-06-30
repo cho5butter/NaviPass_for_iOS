@@ -24,6 +24,7 @@
 		B3B8DAF2208F9526004C4DC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B8DAF0208F9526004C4DC6 /* LaunchScreen.storyboard */; };
 		B3B9A68320DD2732008D70E0 /* historyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B9A68220DD2732008D70E0 /* historyData.swift */; };
 		B3EA6E172090B9E7009EFDBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3EA6E192090B9E7009EFDBF /* Localizable.strings */; };
+		B3F8CD5820E7EAB5008B715E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B3F8CD5720E7EAB5008B715E /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		B3B9A68220DD2732008D70E0 /* historyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyData.swift; sourceTree = "<group>"; };
 		B3EA6E182090B9E7009EFDBF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B3EA6E1A2090B9EC009EFDBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B3F8CD5720E7EAB5008B715E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				B39A649220E1C60900BD4527 /* timeClass.swift */,
+				B3F8CD5720E7EAB5008B715E /* Settings.bundle */,
 				B3B8DAE7208F9523004C4DC6 /* AppDelegate.swift */,
 				B3777E3520DD34B800A96BE1 /* coodinateData.swift */,
 				B3B9A68220DD2732008D70E0 /* historyData.swift */,
@@ -192,6 +195,7 @@
 				B3EA6E172090B9E7009EFDBF /* Localizable.strings in Resources */,
 				B3B8DAEF208F9526004C4DC6 /* Assets.xcassets in Resources */,
 				B3B8DAED208F9523004C4DC6 /* Main.storyboard in Resources */,
+				B3F8CD5820E7EAB5008B715E /* Settings.bundle in Resources */,
 				B352FD2F20E3C2E900A7A29E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

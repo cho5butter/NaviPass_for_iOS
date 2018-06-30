@@ -15,7 +15,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var SettingTitle = [ [NSLocalizedString("settingColor", comment: ""), NSLocalizedString("settingColor1", comment: ""), NSLocalizedString("settingColor2", comment: ""), NSLocalizedString("settingColor3", comment: ""), NSLocalizedString("settingColor4", comment: "")],
                        [NSLocalizedString("settingRemoveAd", comment: ""), NSLocalizedString("settingPurchase", comment: "")],
-                       [NSLocalizedString("settingSupport", comment: ""), "Twitter", NSLocalizedString("settingSupport2", comment: "")]
+                       [NSLocalizedString("settingSupport", comment: ""), "Twitter", NSLocalizedString("settingSupport2", comment: "")], ["Info", "version", "license"]
     ]
 
     override func viewDidLoad() {
@@ -48,6 +48,9 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
         cell.textLabel?.text = SettingTitle[indexPath.section][indexPath.row + 1]
+        if indexPath.section == 3 && indexPath.row == 0 {
+            cell.detailTextLabel?.text = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        }
         
         //現在設定されている色は選択不可能にする
         if indexPath.row == AppDelegate.memory?.getSettingData() && indexPath.section == 0 {
@@ -82,7 +85,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             popup.addButton(button)
             present(popup, animated: true, completion: nil)
-        } else {
+        } else if indexPath.section == 2 {
             //サポート設定
             if indexPath.row == 0 {
                 methodClass.openTwitter(twitterId: "152635614")
@@ -90,6 +93,12 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 methodClass.openBrowser(url: "c5bt.net/contact")
             }
             
+        } else {
+            if indexPath.row == 0 {
+            } else {
+                let url = URL(string: "app-settings:root=General&path=net.c5bt.NaviPass")
+                UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+            }
         }
         
     }
