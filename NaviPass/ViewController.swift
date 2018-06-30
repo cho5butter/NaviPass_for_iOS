@@ -19,64 +19,60 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        layoutSetup()
-        Timer.scheduledTimer(timeInterval: 10/1000, target: self, selector: #selector(ViewController.timerUpdate), userInfo: nil, repeats: true)
+        self.layoutSetup()
+        Timer.scheduledTimer(timeInterval: 0.1/1000, target: self, selector: #selector(ViewController.timerUpdate), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.layoutSetup()
-        print("viewWillAppear")
-        AppDelegate.layoutSetup()
-        
     }
     
     //MARK: - レイアウト
     public func layoutSetup() {
-        backgroundColor()
-        iconTheme()
+        self.backgroundColor()
+        self.iconTheme()
         navigationItem.backBarButtonItem?.title = NSLocalizedString("backButton", comment: "")
+        self.setupNavigationColor()
     }
     
+    private func setupNavigationColor() {
+        //ナビゲーションバーの色変更
+        self.navigationController?.navigationBar.barTintColor = AppDelegate.color?.getNavigationColor()
+        //ナビゲーションアイコンの色変更
+        self.navigationController?.navigationBar.tintColor = AppDelegate.color?.getNavigationIconColor()
+        //タイトル色変更
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : AppDelegate.color?.getNavigationTitleColor() ?? UIColor.white]
+    }
     
     private func backgroundColor() {
         //背景色
-        switch AppDelegate.memory?.getSettingData() {
-        case 0:
-            self.view.backgroundColor = UIColor(red: 66/255, green: 169/255, blue: 206/255, alpha: 1.0)
-        default:
-            break
-        }
+        self.view.backgroundColor = AppDelegate.color?.getBackgroundColor()
     }
     
     private func iconTheme() {
         //テーマごとの画像
-        switch AppDelegate.memory?.getSettingData() {
-        case 0:
-            arrowImg.image = UIImage(named: "arrowImg") //矢印画像
-            mapImg.image = UIImage(named: "map icon") //マップアイコン
-            mainLabel.textColor = UIColor.white //距離ラベル文字色
-            subLabel.textColor = UIColor.white //テキストラベル文字色
-            subLabel.adjustsFontSizeToFitWidth = true //文字サイズ自動調整
-            recordButton.backgroundColor = UIColor(red: 121/255, green:68/255, blue:146/255, alpha: 1.0) //ボタン背景色
-            recordButton.setTitleColor(UIColor.white, for: .normal) //ボタン文字色
-        default:
-            break
-        }
+        arrowImg.image = UIImage(named: "arrowImg") //矢印画像
+        mapImg.image = UIImage(named: "map icon") //マップアイコン
+        mainLabel.textColor = AppDelegate.color?.getMainLabelColor() //距離ラベル文字色
+        subLabel.textColor = AppDelegate.color?.getSubLabelColor()  //テキストラベル文字色
+        subLabel.adjustsFontSizeToFitWidth = true //文字サイズ自動調整
+        recordButton.backgroundColor = AppDelegate.color?.getButtonColor() //ボタン背景色
+        recordButton.setTitleColor(AppDelegate.color?.getButtonLabelColor(), for: .normal) //ボタン文字色
     }
     
     //MARK: - ボタンタップ処理
     @IBAction func recordButton(_ sender: Any) {
-        if (AppDelegate.coodinate?.getLatitude()) != nil {
+        if (AppDelegate.coodinate?.nowLatitude) != nil && (AppDelegate.coodinate?.nowAngle) != nil {
             AppDelegate.memory?.saveNowPoint()
         } else {
-            self.showPopup()
+            self.showPopup(title: NSLocalizedString("mainAlertTitle", comment: ""), content: NSLocalizedString("mainAlertMessage", comment: ""))
         }
     }
     
     //MARK: - タイマー
     @objc func timerUpdate () {
-        if !(AppDelegate.memory?.getUserDefaults().isEmpty)!{
+        if !(AppDelegate.memory?.getUserDefaults().isEmpty)! && AppDelegate.coodinate?.nowAngle != nil && AppDelegate.coodinate?.nowLongitude != nil{
             updateDistanceLabel()
             updateTimeLabel()
         }
@@ -85,7 +81,7 @@ class ViewController: UIViewController {
     private func updateDistanceLabel() {
         let tmpInfo = AppDelegate.coodinate?.calcDistance()
         let tmpDistance = Int((tmpInfo?.distance)!)
-        mainLabel.text = String(tmpDistance)
+        mainLabel.text = String(tmpDistance) + "m"
         rotateArrowImage(angle: (tmpInfo?.angle)!)
     }
     
@@ -96,12 +92,11 @@ class ViewController: UIViewController {
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "EE MM d", options: 0, locale: NSLocale.current)
         let strTime = timeFormatter.string(from: tmpRec!)
-        let convertedElap = methodClass.convertElapsed(interval: tmpElap!)
-        let elapsedFormatter = DateFormatter()
-        elapsedFormatter.dateFormat = "HHmmss"
-        let dataElap = elapsedFormatter.date(from: "\(convertedElap.hour)\(convertedElap.minute)\(convertedElap.second)")
-        let strElap = timeFormatter.string(from: dataElap!)
-        subLabel.text = strElap + "(" + strTime + ")"
+        let elapFormatter = DateComponentsFormatter()
+        elapFormatter.unitsStyle = .positional
+        elapFormatter.allowedUnits = [.hour, .minute, .second]
+        let strElap = elapFormatter.string(from: tmpElap!)
+        subLabel.text = strElap! + "(" + strTime + ")"
     }
     
     private func rotateArrowImage(angle: Double) {
@@ -110,8 +105,8 @@ class ViewController: UIViewController {
     
     //MARK: - ポップアップ
     
-    private func showPopup() {
-        let popup = PopupDialog(title:NSLocalizedString("mainAlertTitle", comment: ""), message:NSLocalizedString("mainAlertMessage", comment: ""))
+    private func showPopup(title: String, content: String) {
+        let popup = PopupDialog(title: title, message: content)
         let button = CancelButton(title: "CLOSE") {
         }
         popup.addButton(button)

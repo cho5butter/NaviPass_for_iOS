@@ -56,7 +56,7 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
             
             //方位と位置の取得開始
             locationManager.startUpdatingLocation()
-            locationManager.startUpdatingLocation()
+            locationManager.startUpdatingHeading()
         }else{
             isAllowGPS = false
         }
@@ -65,7 +65,6 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
     
     //GPS取得
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("GPS取得が実行されています")
         for location in locations {
             self.nowLatitude = location.coordinate.latitude
             self.nowLongitude = location.coordinate.longitude
@@ -91,6 +90,7 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
     public func getAngle() -> CLLocationDirection {
         return self.nowAngle
     }
+
     
     //過去データから取得
     public func getPastData() {
@@ -118,13 +118,14 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
         var resultAngle: Double = 0
         
         let tmpLat = self.recordedLatitude - self.nowLatitude
-        let tmpLon = self.recordedLongitude - self.nowLatitude
+        let tmpLon = self.recordedLongitude - self.nowLongitude
         
         let SILat = convertSI(coordinate: tmpLat, mode: 0)
         let SILon = convertSI(coordinate: tmpLon, mode: 1)
         
         resultDistance = sqrt(pow(abs(SILat),2)+pow(abs(SILon),2))
         resultAngle = methodClass.toDegree(radian: atan2(tmpLat, tmpLon)) - self.nowAngle
+        resultAngle = methodClass.toRadian(degree: resultAngle)
         return (resultDistance, resultAngle)
     }
     

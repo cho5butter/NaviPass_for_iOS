@@ -15,17 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static var memory: historyData? //記録クラスインスタンス
     static var coodinate: coodinateData? //座標クラスインスタンス
     static var time: timeClass? //時間クラスインスタンス
+    static var color: themeColor? //色クラスインスタンス
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         AppDelegate.memory = historyData() //記録クラスインスタンス化
         AppDelegate.coodinate = coodinateData() //座標取得クラスインスタンス化
         AppDelegate.time = timeClass() //時間クラスをインスタンス化
+        AppDelegate.color = themeColor() //色クラスをインスタンス化
         AppDelegate.coodinate?.getPastData() //過去データ取得
         AppDelegate.time?.getPastData() //過去時間取得
-        
-        //レイアウト初期設定
-        AppDelegate.layoutSetup()
         
         return true
     }
@@ -51,26 +50,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
-    //MARK: - レイアウト
-    
-    static public func layoutSetup() {
-        
-        switch AppDelegate.memory?.getSettingData() {
-        case 0:
-            //ナビゲーションバーの色変更
-            UINavigationBar.appearance().barTintColor = UIColor(red: 232/255, green: 111/255, blue: 57/255, alpha: 1)
-            //ナビゲーションアイコンの色変更
-            UINavigationBar.appearance().tintColor = UIColor.white
-            //タイトル色変更
-            UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        default:
-            break
-        }
-        
-    }
-
-
 }
 

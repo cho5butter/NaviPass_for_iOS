@@ -22,6 +22,19 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.setupNavigationColor()
+    }
+    
+    private func setupNavigationColor() {
+        //ナビゲーションバーの色変更
+        self.navigationController?.navigationBar.barTintColor = AppDelegate.color?.getNavigationColor()
+        //ナビゲーションアイコンの色変更
+        self.navigationController?.navigationBar.tintColor = AppDelegate.color?.getNavigationIconColor()
+        //タイトル色変更
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : AppDelegate.color?.getNavigationTitleColor() ?? UIColor.white]
+    }
+    
     // MARK: - テーブル設定
     //参照：https://qiita.com/Ryosuke-Hujisawa/items/d2dcc260087230345acb
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -59,6 +72,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             if indexPath.row != AppDelegate.memory?.getSettingData() {
                 AppDelegate.memory?.setSettingData(settingNumber: indexPath.row)
                 settingTable.reloadData()
+                AppDelegate.color?.reloadColor()
+                self.setupNavigationColor()
             }
         } else if indexPath.section == 1 {
             //課金設定
