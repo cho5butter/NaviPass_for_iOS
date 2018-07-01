@@ -36,7 +36,7 @@ class themeColor: NSObject {
         self.defaultColorTheme = [UIColor(red: 66/255, green: 169/255, blue: 206/255, alpha: 1.0), UIColor(red: 121/255, green: 68/255, blue: 148/255, alpha: 1.0), UIColor(red: 232/255, green: 111/255, blue: 40/255, alpha: 1.0), UIColor(red: 248/255, green: 234/255, blue: 51/255, alpha: 1.0)]
         self.coolColorTheme = [UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1.0), UIColor(red: 89/255, green: 180/255, blue: 252/255, alpha: 1.0), UIColor(red: 61/255, green: 61/255, blue: 61/255, alpha: 1.0), UIColor(red: 93/255, green: 190/255, blue: 241/255, alpha: 1.0)]
         self.cuteColorTheme = [UIColor(red: 118/255, green: 180/255, blue: 219/255, alpha: 1.0), UIColor(red: 48/255, green: 126/255, blue: 169/255, alpha: 1.0), UIColor(red: 246/255, green: 162/255, blue: 183/255, alpha: 1.0), UIColor(red: 194/255, green: 222/255, blue: 246/255, alpha: 1.0)]
-        self.lightColorTheme = [UIColor(red: 66/255, green: 169/255, blue: 206/255, alpha: 1.0), UIColor(red: 121/255, green: 68/255, blue: 148/255, alpha: 1.0), UIColor(red: 232/255, green: 111/255, blue: 40/255, alpha: 1.0), UIColor(red: 248/255, green: 234/255, blue: 51/255, alpha: 1.0)]
+        self.lightColorTheme = [UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0), UIColor(red: 25/255, green: 122/255, blue: 251/255, alpha: 1.0), UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1.0), UIColor(red: 248/255, green: 234/255, blue: 51/255, alpha: 1.0)]
         
         //各パーツ色
         self.setPartsColor()
@@ -52,13 +52,13 @@ class themeColor: NSObject {
     }
     
     private func setPartsColor() {
-        self.mainLabelColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.white]
-        self.subLabelColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.white]
+        self.mainLabelColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.black]
+        self.subLabelColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.black]
         self.buttonColor = [defaultColorTheme[1], coolColorTheme[1], cuteColorTheme[1], lightColorTheme[1]]
         self.buttonLabelColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.white]
         self.navigationColor = [defaultColorTheme[2], coolColorTheme[2], cuteColorTheme[2], lightColorTheme[2]]
-        self.navigationTitleColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.white]
-        self.navigationIconColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.white]
+        self.navigationTitleColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.black]
+        self.navigationIconColor = [UIColor.white, UIColor.white, UIColor.white, lightColorTheme[1]]
         self.backgroundColor = [defaultColorTheme[0], coolColorTheme[0], cuteColorTheme[0], lightColorTheme[0]]
     }
     
