@@ -48,3 +48,9 @@
 "historyAlertMessage" = "Would you like to reset this location as your destination?";
 "historyAlertOK" = "OK";
 "historyAlertCANCEL" = "CANCEL";
+
+//---------マップ画面-----------//
+
+//ピンラベル
+"mapPinTitle" = "Destination";
+"mapPinSnipet" = "The place around here is recorded"

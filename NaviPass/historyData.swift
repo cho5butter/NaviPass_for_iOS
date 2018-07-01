@@ -111,7 +111,7 @@ class historyData:NSObject {
     
     //過多データ削除
     private func removePastData() {
-        if self.historyData.count >= 10 {
+        if self.historyData.count > 10 {
             print("履歴が11以上存在しているため、超過分を削除しました")
             self.historyData.remove(at: 10)
         } else {

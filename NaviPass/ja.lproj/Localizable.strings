@@ -49,3 +49,9 @@
 "historyAlertOK" = "承諾";
 "historyAlertCANCEL" = "拒否";
 
+//---------マップ画面-----------//
+
+//ピンラベル
+"mapPinTitle" = "目的地";
+"mapPinSnipet" = "このあたりの場所が記録されています"
+

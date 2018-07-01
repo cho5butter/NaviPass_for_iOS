@@ -52,8 +52,8 @@ class themeColor: NSObject {
     }
     
     private func setPartsColor() {
-        self.mainLabelColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.black]
-        self.subLabelColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.black]
+        self.mainLabelColor = [UIColor.white, UIColor.black, UIColor.white, UIColor.black]
+        self.subLabelColor = [UIColor.white, UIColor.black, UIColor.white, UIColor.black]
         self.buttonColor = [defaultColorTheme[1], coolColorTheme[1], cuteColorTheme[1], lightColorTheme[1]]
         self.buttonLabelColor = [UIColor.white, UIColor.white, UIColor.white, UIColor.white]
         self.navigationColor = [defaultColorTheme[2], coolColorTheme[2], cuteColorTheme[2], lightColorTheme[2]]
