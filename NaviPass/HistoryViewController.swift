@@ -15,13 +15,12 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet var historyTableView: UITableView! //履歴テーブル表示
     private var historyArr: Array<Dictionary<String, Any>>! //過去データ格納配列
     
+    @IBOutlet weak var numLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getHistory()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-    }
     
     //MARK: - 初期処理関係
     
@@ -91,6 +90,16 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         }
             deleteButton.backgroundColor = UIColor.red
             return [deleteButton]
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let numberLabel = cell.viewWithTag(1) as! UILabel
+        let addressLabel = cell.viewWithTag(2) as! UILabel
+        let timeLabel = cell.viewWithTag(3) as! UILabel
+        numberLabel.backgroundColor = AppDelegate.color?.getButtonColor()
+        numberLabel.textColor = AppDelegate.color?.getButtonLabelColor()
+        addressLabel.textColor = UIColor(red: 40/255,green: 40/255,blue: 40/255, alpha: 1.0)
+        timeLabel.textColor = UIColor(red: 80/255,green: 80/255,blue: 80/255, alpha: 1.0)
     }
     
     //MARK: - 独自関数その他処理

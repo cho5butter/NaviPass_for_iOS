@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.layoutSetup()
-        Timer.scheduledTimer(timeInterval: 0.1/1000, target: self, selector: #selector(ViewController.timerUpdate), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 10/1000, target: self, selector: #selector(ViewController.timerUpdate), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -93,8 +93,8 @@ class ViewController: UIViewController {
         timeFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "EE MM d", options: 0, locale: NSLocale.current)
         let strTime = timeFormatter.string(from: tmpRec!)
         let elapFormatter = DateComponentsFormatter()
-        elapFormatter.unitsStyle = .positional
-        elapFormatter.allowedUnits = [.hour, .minute, .second]
+        elapFormatter.unitsStyle = .full
+        elapFormatter.allowedUnits = [.year, .hour, .minute]
         let strElap = elapFormatter.string(from: tmpElap!)
         subLabel.text = strElap! + "(" + strTime + ")"
     }

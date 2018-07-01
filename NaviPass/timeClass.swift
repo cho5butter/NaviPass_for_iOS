@@ -27,7 +27,7 @@ class timeClass: UIViewController {
     }
     
     public func calcElapsedTime() -> (elapsedTime: TimeInterval, recordedTime: Date) {
-        let elapsedTime = self.recordedDate.timeIntervalSinceNow
+        let elapsedTime = abs(self.recordedDate.timeIntervalSinceNow)
         
         return (elapsedTime, self.recordedDate)
     }

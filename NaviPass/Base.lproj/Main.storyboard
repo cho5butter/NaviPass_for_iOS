@@ -179,16 +179,33 @@
                     <view key="view" contentMode="scaleToFill" id="j5e-mO-HG1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tH2-dN-SIZ">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <connections>
+                                    <segue destination="OHx-nL-zdh" kind="embed" id="mzK-eX-CB4"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tH2-dN-SIZ" firstAttribute="leading" secondItem="pXR-Ee-wAJ" secondAttribute="leading" id="h5a-xh-tte"/>
+                            <constraint firstItem="tH2-dN-SIZ" firstAttribute="top" secondItem="pXR-Ee-wAJ" secondAttribute="top" id="hWB-DX-p1L"/>
+                            <constraint firstItem="tH2-dN-SIZ" firstAttribute="trailing" secondItem="pXR-Ee-wAJ" secondAttribute="trailing" id="hmn-bK-785"/>
+                            <constraint firstAttribute="bottom" secondItem="tH2-dN-SIZ" secondAttribute="bottom" id="qeh-fm-Ejg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pXR-Ee-wAJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="peQ-fg-NGw">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ZqX-ew-GtU"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="tH2-dN-SIZ" id="F1F-Hy-NlR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXW-ZO-dNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3231" y="129"/>
+            <point key="canvasLocation" x="3229.5999999999999" y="128.57142857142858"/>
         </scene>
         <!--History-->
         <scene sceneID="F4N-Uk-OSt">
@@ -278,6 +295,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oI8-bp-cOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111" y="117"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1ql-WR-qq8">
+            <objects>
+                <viewController id="OHx-nL-zdh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gSq-Zv-c47">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JWT-hN-S3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="807"/>
         </scene>
     </scenes>
     <resources>
