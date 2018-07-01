@@ -44,4 +44,8 @@
 //セルラベル
 "historyAddressLabel" = "履歴がありません";
 "historyTimeLabel" = "ここに記録場所の履歴が残ります";
+"historyAlertTitle" = "確認";
+"historyAlertMessage" = "この場所を目的地として再設定しますか？";
+"historyAlertOK" = "承諾";
+"historyAlertCANCEL" = "拒否";
 

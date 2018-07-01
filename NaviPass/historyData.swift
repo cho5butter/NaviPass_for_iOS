@@ -92,6 +92,17 @@ class historyData:NSObject {
         
     }
     
+    //過去データの記録
+    public func setOldPoint(num: Int) {
+        let tmpDic = self.historyData[num]
+        AppDelegate.coodinate?.recordDesignationCoodinates(latitude: tmpDic["latitude"]!, longitude: tmpDic["longitude"]!)
+        AppDelegate.time?.recordDesignationTime(time: tmpDic["time"] as! Date)
+        let newDic: Dictionary = ["latitude": tmpDic["latitude"], "longitude": tmpDic["longitude"], "time": tmpDic["time"]]
+        self.historyData.insert(newDic as [String : AnyObject], at: 0)
+        removePastData()
+        UserDefaults.standard.set(self.historyData, forKey: "historyArr")
+    }
+    
     private func removePastData() {
         if self.historyData.count >= 10 {
             print("履歴が11以上存在しているため、超過分を削除しました")

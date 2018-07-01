@@ -39,5 +39,8 @@ class timeClass: UIViewController {
     public func recordNowData() {
         self.recordedDate = Date()
     }
-
+    
+    public func recordDesignationTime(time: Date) {
+        self.recordedDate = time
+    }
 }

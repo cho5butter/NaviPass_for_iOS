@@ -158,4 +158,10 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
         self.recordedLongitude = self.nowLongitude
     }
     
+    //指定地を記録
+    public func recordDesignationCoodinates(latitude: AnyObject, longitude: AnyObject) {
+        self.recordedLatitude = latitude as! CLLocationDegrees
+        self.recordedLongitude = longitude as! CLLocationDegrees
+    }
+    
 }

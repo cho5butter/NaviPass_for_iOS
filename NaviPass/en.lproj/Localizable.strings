@@ -44,3 +44,7 @@
 //セルラベル
 "historyAddressLabel" = "There is no history";
 "historyTimeLabel" = "History of recording place will remain here";
+"historyAlertTitle" = "Confirmation";
+"historyAlertMessage" = "Would you like to reset this location as your destination?";
+"historyAlertOK" = "OK";
+"historyAlertCANCEL" = "CANCEL";

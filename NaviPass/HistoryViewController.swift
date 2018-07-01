@@ -8,16 +8,20 @@
 
 import UIKit
 import MapKit
+import PopupDialog
 
 class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var historyTableView: UITableView! //履歴テーブル表示
     private var historyArr: Array<Dictionary<String, Any>>! //過去データ格納配列
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getHistory()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        <#code#>
     }
     
     //MARK: - 初期処理関係
@@ -44,7 +48,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         let addressLabel = cell?.viewWithTag(2) as! UILabel
         let timeLabel = cell?.viewWithTag(3) as! UILabel
         
-        if self.historyArr.isEmpty {
+        if self.historyArr.isEmpty && self.historyArr.count == 1 {
             numberLabel.text = "0"
             addressLabel.text = NSLocalizedString("historyAddressLabel", comment: "")
             timeLabel.text = NSLocalizedString("historyTimeLabel", comment: "")
@@ -52,40 +56,59 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
             let tmpDic = self.historyArr[indexPath.row + 1]
             
             numberLabel.text = String(indexPath.row + 1)
-            addressLabel.text = self.reverseGeocoder(latitude: tmpDic["latitude"] as! CLLocationDegrees, longitude: tmpDic["longitude"] as! CLLocationDegrees)
-            timeLabel.text = self.displayTimeFormat(data: tmpDic["time"] as! Data)
+            timeLabel.text = self.displayTimeFormat(date: tmpDic["time"] as! Date)
+            //インスタンス生成
+            let myGeocorder = CLGeocoder()
+            let myLocation = CLLocation(latitude: tmpDic["latitude"] as! CLLocationDegrees, longitude: tmpDic["longitude"] as! CLLocationDegrees)
+            //処理
+            myGeocorder.reverseGeocodeLocation(myLocation, completionHandler: { (placemarks, error) -> Void in
+                
+                if error != nil {
+                    addressLabel.text = "error"
+                } else {
+                    let placemark = placemarks![0]
+                    addressLabel.text = placemark.administrativeArea! + placemark.locality! + placemark.name!
+                }
+            })
             
         }
         return cell!
     }
     
-    //MARK: - 独自関数その他処理
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //選択されたときの処理
+        tableView.deselectRow(at: indexPath, animated: true)
+        if !self.historyArr.isEmpty {
+            self.popUpAlert(row: indexPath.row)
+        }
+    }
     
-    //逆ジオコーディング
-    private func reverseGeocoder(latitude: CLLocationDegrees, longitude: CLLocationDegrees) -> String {
-        //インスタンス生成
-        let myGeocorder = CLGeocoder()
-        let myLocation = CLLocation(latitude: latitude, longitude: longitude)
-        
-        //変数
-        var prefecture: String!
-        var locality: String!
-        var subLocality: String!
-        
-        //処理
-        myGeocorder.reverseGeocodeLocation(myLocation, completionHandler: { (placemarks, error) -> Void in
-            for placemark in placemarks! {
-                prefecture = placemark.administrativeArea!
-                locality = placemark.locality!
-                subLocality = placemark.subLocality!
-            }
-        })
-        return prefecture + locality + subLocality
+    //MARK: - 独自関数その他処理
+    //履歴呼び出しポップアップ
+    private func popUpAlert(row: Int) {
+        let popup = PopupDialog(title: NSLocalizedString("historyAlertTitle", comment: ""), message: NSLocalizedString("historyAlertMessage", comment: ""))
+        let button1 = DefaultButton(title: NSLocalizedString("historyAlertOK", comment: "")) {
+            self.setHistoryLocation(row: row)
+            self.navigationController?.popViewController(animated: true)
+            print("復元が選択されました")
+        }
+        let button2 = DefaultButton(title: NSLocalizedString("historyAlertCANCEL", comment: "")) {
+            print("処理がキャンセルされました")
+        }
+        popup.addButtons([button1, button2])
+        present(popup, animated: true, completion: nil)
+    }
+    
+    //履歴を目的地に
+    private func setHistoryLocation(row: Int) {
+        AppDelegate.memory?.setOldPoint(num: row + 1)
     }
     
     //時間表記整形
-    private func displayTimeFormat(data: Data) -> String {
-        return "aho"
+    private func displayTimeFormat(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "EE MM dd HH mm", options: 0, locale: Locale.current)
+        return formatter.string(from: date)
     }
     
     
