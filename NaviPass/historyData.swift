@@ -88,7 +88,7 @@ class historyData:NSObject {
         let tmpDic: Dictionary = ["latitude": tmpLat as Any, "longitude": tmpLon as Any, "time": tmpData as Any] as [String : AnyObject]
         self.historyData.insert(tmpDic, at: 0) //配列の最初に現在地点を記録した辞書を追加
         removePastData()
-        UserDefaults.standard.set(self.historyData, forKey: "historyArr")
+        self.arrToUserDefaults()
         
     }
     
@@ -100,9 +100,16 @@ class historyData:NSObject {
         let newDic: Dictionary = ["latitude": tmpDic["latitude"], "longitude": tmpDic["longitude"], "time": tmpDic["time"]]
         self.historyData.insert(newDic as [String : AnyObject], at: 0)
         removePastData()
-        UserDefaults.standard.set(self.historyData, forKey: "historyArr")
+        self.arrToUserDefaults()
     }
     
+    //特定データの削除
+    public func deleteData(row: Int) {
+        self.historyData.remove(at: row)
+        self.arrToUserDefaults()
+    }
+    
+    //過多データ削除
     private func removePastData() {
         if self.historyData.count >= 10 {
             print("履歴が11以上存在しているため、超過分を削除しました")
@@ -110,6 +117,11 @@ class historyData:NSObject {
         } else {
             print("超過をしていないため、削除されませんでした")
         }
+    }
+    
+    //現在配列をユーザーデフォルトに保存
+    private func arrToUserDefaults() {
+        UserDefaults.standard.set(self.historyData, forKey: "historyArr")
     }
     
     

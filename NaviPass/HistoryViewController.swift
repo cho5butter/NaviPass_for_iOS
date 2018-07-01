@@ -21,7 +21,6 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        <#code#>
     }
     
     //MARK: - 初期処理関係
@@ -81,6 +80,17 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         if !self.historyArr.isEmpty {
             self.popUpAlert(row: indexPath.row)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        //データ削除処理
+        let deleteButton: UITableViewRowAction = UITableViewRowAction(style: .normal, title: "Delete") { (action, index) -> Void in
+            self.historyArr.remove(at: indexPath.row + 1)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            AppDelegate.memory?.deleteData(row: indexPath.row + 1)
+        }
+            deleteButton.backgroundColor = UIColor.red
+            return [deleteButton]
     }
     
     //MARK: - 独自関数その他処理
