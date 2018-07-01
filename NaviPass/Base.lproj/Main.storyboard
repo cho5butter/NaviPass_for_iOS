@@ -175,7 +175,7 @@
         <!--Map-->
         <scene sceneID="SV9-Tt-w0V">
             <objects>
-                <viewController id="ttk-Ti-6nQ" customClass="MapViewController" customModule="NaviPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ttk-Ti-6nQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j5e-mO-HG1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,9 +199,6 @@
                     <navigationItem key="navigationItem" title="Map" id="peQ-fg-NGw">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ZqX-ew-GtU"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="mapView" destination="tH2-dN-SIZ" id="F1F-Hy-NlR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXW-ZO-dNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -296,14 +293,15 @@
             </objects>
             <point key="canvasLocation" x="111" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="1ql-WR-qq8">
             <objects>
-                <viewController id="OHx-nL-zdh" sceneMemberID="viewController">
+                <viewController id="OHx-nL-zdh" customClass="MapViewController" customModule="NaviPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gSq-Zv-c47">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8R5-uN-k48"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWT-hN-S3L" userLabel="First Responder" sceneMemberID="firstResponder"/>

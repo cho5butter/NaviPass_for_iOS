@@ -36,6 +36,7 @@ class MapViewController: UIViewController {
             let position = CLLocationCoordinate2D(latitude: tmpDic["latitude"] as! CLLocationDegrees, longitude: tmpDic["longitude"] as! CLLocationDegrees)
             let marker = GMSMarker(position: position)
             marker.title = "Your destination."
+            marker.icon = GMSMarker.markerImage(with: AppDelegate.color?.getButtonColor())
             marker.map = mapView
         }
     }
