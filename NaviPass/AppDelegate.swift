@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func GoogleAPIInitialize() {
         //GoogleサービスAPI設定
-        GMSServices.provideAPIKey("AIzaSyCSAsvogpdY1mz8IHcWYAdrB4DAtD0dlxQ")
+        GMSServices.provideAPIKey("AIzaSyA0JJOTB19DiJF-FonrdBUwb0609Gz4bIw")
     }
 }
 

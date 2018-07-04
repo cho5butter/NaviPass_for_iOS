@@ -51,8 +51,8 @@ class ViewController: UIViewController {
     }
     
     private func iconTheme() {
-        //テーマごとの画像
-        arrowImg.image = UIImage(named: "arrowImg") //矢印画像
+        let mapImgName: Array<String>  = ["arrowImg","arrowImgCool","arrowImgCute","arrowImgLight"] //テーマごとの矢印画像の名前配列
+        arrowImg.image = UIImage(named: mapImgName[(AppDelegate.memory?.getSettingData())!]) //矢印画像
         mapImg.image = UIImage(named: "map icon") //マップアイコン
         mainLabel.textColor = AppDelegate.color?.getMainLabelColor() //距離ラベル文字色
         subLabel.textColor = AppDelegate.color?.getSubLabelColor()  //テキストラベル文字色

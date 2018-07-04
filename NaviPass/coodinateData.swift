@@ -124,7 +124,7 @@ class coodinateData: NSObject, CLLocationManagerDelegate {
         let SILon = convertSI(coordinate: tmpLon, mode: 1)
         
         resultDistance = sqrt(pow(abs(SILat),2)+pow(abs(SILon),2))
-        resultAngle = methodClass.toDegree(radian: atan2(tmpLat, tmpLon)) - self.nowAngle
+        resultAngle = methodClass.toDegree(radian: atan2(SILon, SILat)) - self.nowAngle
         resultAngle = methodClass.toRadian(degree: resultAngle)
         return (resultDistance, resultAngle)
     }

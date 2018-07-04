@@ -23,6 +23,7 @@
 		B3B8DAEF208F9526004C4DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B8DAEE208F9526004C4DC6 /* Assets.xcassets */; };
 		B3B8DAF2208F9526004C4DC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B8DAF0208F9526004C4DC6 /* LaunchScreen.storyboard */; };
 		B3B9A68320DD2732008D70E0 /* historyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B9A68220DD2732008D70E0 /* historyData.swift */; };
+		B3D63A6B20EBD02B00D80A2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3D63A6A20EBD02B00D80A2F /* GoogleService-Info.plist */; };
 		B3EA6E172090B9E7009EFDBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3EA6E192090B9E7009EFDBF /* Localizable.strings */; };
 		B3F8CD5820E7EAB5008B715E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B3F8CD5720E7EAB5008B715E /* Settings.bundle */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		B3B8DAF1208F9526004C4DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3B8DAF3208F9526004C4DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3B9A68220DD2732008D70E0 /* historyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyData.swift; sourceTree = "<group>"; };
+		B3D63A6A20EBD02B00D80A2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3EA6E182090B9E7009EFDBF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B3EA6E1A2090B9EC009EFDBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B3F8CD5720E7EAB5008B715E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				B3B8DAEE208F9526004C4DC6 /* Assets.xcassets */,
 				B3B8DAF0208F9526004C4DC6 /* LaunchScreen.storyboard */,
 				B3B8DAF3208F9526004C4DC6 /* Info.plist */,
+				B3D63A6A20EBD02B00D80A2F /* GoogleService-Info.plist */,
 				B352FD3120E3C2E900A7A29E /* InfoPlist.strings */,
 			);
 			path = NaviPass;
@@ -197,6 +200,7 @@
 				B3B8DAED208F9523004C4DC6 /* Main.storyboard in Resources */,
 				B3F8CD5820E7EAB5008B715E /* Settings.bundle in Resources */,
 				B352FD2F20E3C2E900A7A29E /* InfoPlist.strings in Resources */,
+				B3D63A6B20EBD02B00D80A2F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +216,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-NaviPass/Pods-NaviPass-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MMPopLabel/MMPopLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -219,6 +224,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMPopLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
