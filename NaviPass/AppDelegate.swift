@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GoogleAPIInitialize()
+        FirebaseApp.configure()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")//テスト用
         AppDelegate.memory = historyData() //記録クラスインスタンス化
         AppDelegate.coodinate = coodinateData() //座標取得クラスインスタンス化
         AppDelegate.time = timeClass() //時間クラスをインスタンス化
@@ -54,8 +57,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func GoogleAPIInitialize() {
+        var key = ""
+        if let filePath = Bundle.main.path(forResource: "key", ofType: "txt") {
+            key = try! String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
+        }
+        print("GoogleKey\(key)")
         //GoogleサービスAPI設定
-        GMSServices.provideAPIKey("AIzaSyA0JJOTB19DiJF-FonrdBUwb0609Gz4bIw")
+        GMSServices.provideAPIKey(key)
     }
 }
 

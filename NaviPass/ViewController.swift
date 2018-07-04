@@ -8,6 +8,7 @@
 
 import UIKit
 import PopupDialog
+import GoogleMobileAds
 
 class ViewController: UIViewController {
 
@@ -16,9 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainLabel: UILabel! //距離表示ラベル
     @IBOutlet weak var subLabel: UILabel! //記録時刻表示ラベル
     @IBOutlet weak var recordButton: UIButton! //現在地記録ボタン
+    @IBOutlet weak var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupAd()
         self.layoutSetup()
         Timer.scheduledTimer(timeInterval: 10/1000, target: self, selector: #selector(ViewController.timerUpdate), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,6 +29,13 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.layoutSetup()
+    }
+    
+    //MARK: - 広告表示用
+    private func setupAd() {
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     //MARK: - レイアウト

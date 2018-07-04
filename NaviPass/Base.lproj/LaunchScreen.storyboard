@@ -25,11 +25,27 @@
                                     <constraint firstAttribute="width" constant="300" id="l5k-Hn-V8m"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NaviPass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuV-nh-nkH">
+                                <rect key="frame" x="127" y="124.5" width="122.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ちょこばた" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMi-JC-cRE">
+                                <rect key="frame" x="136" y="518" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.4061429500579834" green="0.7425726056098938" blue="0.91602414846420288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="O0m-No-8uj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Dre-gA-pJt"/>
+                            <constraint firstItem="O0m-No-8uj" firstAttribute="top" secondItem="UuV-nh-nkH" secondAttribute="bottom" constant="20" id="HB0-gM-ihr"/>
+                            <constraint firstItem="aMi-JC-cRE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SDf-Tx-BX3"/>
                             <constraint firstItem="O0m-No-8uj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="W9d-AQ-TFK"/>
+                            <constraint firstItem="UuV-nh-nkH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XC1-yc-t99"/>
+                            <constraint firstItem="aMi-JC-cRE" firstAttribute="top" secondItem="O0m-No-8uj" secondAttribute="bottom" constant="35" id="vOe-3y-m7i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
