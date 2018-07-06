@@ -104,9 +104,9 @@ class ViewController: UIViewController {
         let strTime = timeFormatter.string(from: tmpRec!)
         let elapFormatter = DateComponentsFormatter()
         elapFormatter.unitsStyle = .full
-        elapFormatter.allowedUnits = [.year, .hour, .minute]
+        elapFormatter.allowedUnits = [.day, .hour, .minute]
         let strElap = elapFormatter.string(from: tmpElap!)
-        subLabel.text = strElap! + "(" + strTime + ")"
+        subLabel.text = strElap! + NSLocalizedString("mainAgo", comment: "") + "(" + strTime + ")"
     }
     
     private func rotateArrowImage(angle: Double) {

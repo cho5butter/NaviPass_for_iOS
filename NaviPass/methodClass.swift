@@ -18,7 +18,7 @@ class methodClass: UIViewController {
             UIApplication.shared.open(tUrl, options: [:], completionHandler: nil)
         } else {
             print("Twitter インストールされていない")
-            let tUrl = "https://twitter.com/intent/user?user_id=" + twitterId
+            let tUrl = "twitter.com/intent/user?user_id=" + twitterId
             methodClass.openBrowser(url: tUrl)
         }
     }

@@ -39,6 +39,9 @@
 "mainAlertTitle" = "I'm sorry";
 "mainAlertMessage" = "Your current location has not been successfully acquired";
 
+//メイン画面時間ラベル
+"mainAgo" = "ago ";
+
 //---------履歴画面-----------//
 
 //セルラベル
