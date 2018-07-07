@@ -42,6 +42,10 @@
 //メイン画面時間ラベル
 "mainAgo" = "ago ";
 
+//位置情報取得できてないときのエラー
+"mainLabelerror" = "Unknown";
+"subLabelerror" = "Location information can not be acquired";
+
 //---------履歴画面-----------//
 
 //セルラベル

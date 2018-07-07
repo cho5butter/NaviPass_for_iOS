@@ -82,9 +82,14 @@ class ViewController: UIViewController {
     
     //MARK: - タイマー
     @objc func timerUpdate () {
-        if !(AppDelegate.memory?.getUserDefaults().isEmpty)! && AppDelegate.coodinate?.nowAngle != nil && AppDelegate.coodinate?.nowLongitude != nil{
-            updateDistanceLabel()
-            updateTimeLabel()
+        if !(AppDelegate.memory?.getUserDefaults().isEmpty)!{
+            if AppDelegate.coodinate?.nowAngle != nil && AppDelegate.coodinate?.nowLongitude != nil {
+                updateDistanceLabel()
+                updateTimeLabel()
+            } else {
+                mainLabel.text = NSLocalizedString("mainLabelerror", comment: "")
+                subLabel.text = NSLocalizedString("subLabelerror", comment: "")
+            }
         }
     }
     
